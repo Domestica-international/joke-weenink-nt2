@@ -498,18 +498,16 @@
         }
 
         .about-img-wrapper {
-            background: linear-gradient(135deg, #EDF3F0 0%, #F5EDE3 100%);
-            border-radius: 24px;
-            padding: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 360px;
             position: relative;
+            border-radius: 24px;
+            overflow: hidden;
         }
 
-        .about-emoji {
-            font-size: 8rem;
+        .about-img {
+            width: 100%;
+            height: auto;
+            border-radius: 24px;
+            display: block;
         }
 
         .about-decoration {
@@ -644,6 +642,43 @@
             border-radius: 50px;
             font-size: 0.78rem;
             font-weight: 600;
+        }
+
+        /* ========== IMAGE BANNER ========== */
+        .image-banner {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-banner-inner {
+            position: relative;
+            height: 320px;
+        }
+
+        .image-banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-banner-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(43,43,43,0.6) 0%, rgba(91,123,109,0.5) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-banner-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #fff;
+            font-style: italic;
+            text-align: center;
+            max-width: 600px;
+            line-height: 1.5;
         }
 
         /* ========== PRICING ========== */
@@ -826,6 +861,35 @@
             background: rgba(91,123,109,0.3);
         }
 
+        /* ========== PHOTO STRIP ========== */
+        .photo-strip {
+            background: #FAFAF7;
+            padding: 0;
+        }
+
+        .photo-strip-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+        }
+
+        .photo-strip-item {
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .photo-strip-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .photo-strip-item:hover img {
+            transform: scale(1.05);
+        }
+
         /* ========== TESTIMONIALS ========== */
         .testimonials {
             padding: 100px 0;
@@ -904,6 +968,21 @@
         .approach {
             padding: 100px 0;
             background: #FAFAF7;
+        }
+
+        .approach-photo-wrapper {
+            margin-bottom: 40px;
+            border-radius: 20px;
+            overflow: hidden;
+            max-height: 360px;
+        }
+
+        .approach-photo {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            display: block;
+            border-radius: 20px;
         }
 
         .approach-grid {
@@ -1013,7 +1092,7 @@
         /* ========== CTA ========== */
         .cta-section {
             padding: 100px 0;
-            background: linear-gradient(135deg, #5B7B6D 0%, #4A6559 100%);
+            background: linear-gradient(135deg, rgba(91,123,109,0.92) 0%, rgba(74,101,89,0.92) 100%), url('Images/stock/amsterdam-canal.jpg') center/cover no-repeat;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -1180,6 +1259,14 @@
 
             .step:not(:last-child)::after {
                 display: none;
+            }
+
+            .photo-strip-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-strip-item {
+                height: 220px;
             }
 
             .testimonial-grid {
@@ -1352,7 +1439,7 @@
             <div class="about-grid">
                 <div class="about-visual">
                     <div class="about-img-wrapper">
-                        <span class="about-emoji">📚</span>
+                        <img src="Images/stock/students-celebrating.jpg" alt="NT2 docent Joke Weenink met diverse cursisten in de les" class="about-img">
                         <div class="about-decoration">21+ jaar NT2 ervaring</div>
                     </div>
                 </div>
@@ -1448,6 +1535,18 @@
                         Samen leren is leuker. En goedkoper. In kleine groepen van maximaal 6 personen oefen je Nederlands met mensen die in hetzelfde schuitje zitten. Letterlijk en figuurlijk.
                     </p>
                     <span class="service-tag">Max. 6 personen</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== IMAGE BANNER ========== -->
+    <section class="image-banner">
+        <div class="image-banner-inner">
+            <img src="Images/stock/woman-teaching.jpg" alt="NT2 docent voor het whiteboard tijdens een Nederlandse les" class="image-banner-img">
+            <div class="image-banner-overlay">
+                <div class="container">
+                    <p class="image-banner-quote">"Elke taal die je leert, geeft je een nieuw leven."</p>
                 </div>
             </div>
         </div>
@@ -1554,6 +1653,21 @@
         </div>
     </section>
 
+    <!-- ========== PHOTO STRIP ========== -->
+    <section class="photo-strip">
+        <div class="photo-strip-grid">
+            <div class="photo-strip-item">
+                <img src="Images/stock/group-studying.jpg" alt="Groep cursisten studeren samen Nederlands">
+            </div>
+            <div class="photo-strip-item">
+                <img src="Images/stock/online-lesson.jpg" alt="Online NT2 les via videobellen">
+            </div>
+            <div class="photo-strip-item">
+                <img src="Images/stock/amsterdam-canal.jpg" alt="Amsterdamse grachten - thuis in Nederland">
+            </div>
+        </div>
+    </section>
+
     <!-- ========== TESTIMONIALS ========== -->
     <section class="testimonials" id="reviews">
         <div class="container text-center">
@@ -1614,6 +1728,9 @@
             <p class="section-subtitle">
                 Geen klassikaal onderwijs. Geen saaie oefeningen. Wel dit:
             </p>
+            <div class="approach-photo-wrapper">
+                <img src="Images/stock/teaching-classroom.jpg" alt="NT2 les in een gezellig klaslokaal" class="approach-photo">
+            </div>
             <div class="approach-grid">
                 <div class="approach-card">
                     <div class="approach-card-icon">🎯</div>
