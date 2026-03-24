@@ -65,7 +65,7 @@
                 "name": "Hoe lang duurt het om Nederlands te leren?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Dat verschilt per persoon. Sommige cursisten halen A2-niveau in 6 maanden, anderen hebben een jaar nodig. Het hangt af van je moedertaal, hoeveel je oefent en hoe vaak je les hebt. Maar met goede begeleiding en doorzettingsvermogen gaat het sneller dan je denkt."
+                    "text": "A1 niveau bereik je in ongeveer 80 lesuren. Voor A2 (het niveau voor inburgering) heb je zo'n 120 lesuren nodig. De meeste cursisten slagen binnen 40 weken. Met privéles gaat het vaak nog sneller."
                 }
             },
             {
@@ -808,6 +808,202 @@
             text-align: center;
         }
 
+        .pricing-reassurance {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .pricing-reassurance-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+            color: #555;
+        }
+
+        .pricing-reassurance-item span {
+            font-size: 1.1rem;
+        }
+
+        /* ========== TIMELINE ========== */
+        .timeline {
+            padding: 100px 0;
+            background: #fff;
+        }
+
+        .timeline-track {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 0;
+            margin-top: 56px;
+            position: relative;
+        }
+
+        .timeline-track::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 15%;
+            right: 15%;
+            height: 4px;
+            background: linear-gradient(90deg, #5B7B6D 0%, #8DB5A4 50%, #D4B282 100%);
+            border-radius: 2px;
+            z-index: 0;
+        }
+
+        .timeline-node {
+            flex: 1;
+            max-width: 260px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-dot {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #fff;
+            border: 4px solid #5B7B6D;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 20px rgba(91,123,109,0.15);
+        }
+
+        .timeline-dot .hours {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #5B7B6D;
+            line-height: 1.1;
+        }
+
+        .timeline-dot .hours small {
+            font-size: 0.65rem;
+            font-weight: 500;
+            display: block;
+            color: #888;
+        }
+
+        .timeline-node:nth-child(2) .timeline-dot {
+            border-color: #8DB5A4;
+            width: 90px;
+            height: 90px;
+        }
+
+        .timeline-node:nth-child(2) .timeline-dot .hours {
+            color: #5B7B6D;
+        }
+
+        .timeline-node:last-child .timeline-dot {
+            border-color: #D4B282;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #FFF8F0, #fff);
+        }
+
+        .timeline-node:last-child .timeline-dot .hours {
+            color: #D4B282;
+        }
+
+        .timeline-node h3 {
+            font-size: 1.15rem;
+            margin-bottom: 6px;
+        }
+
+        .timeline-node p {
+            font-size: 0.88rem;
+            color: #6B6B6B;
+            line-height: 1.6;
+            max-width: 200px;
+            margin: 0 auto;
+        }
+
+        .timeline-note {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+            font-style: italic;
+        }
+
+        /* ========== COMPARISON ========== */
+        .comparison {
+            padding: 100px 0;
+            background: #FAFAF7;
+        }
+
+        .comparison-table-wrapper {
+            margin-top: 56px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            min-width: 600px;
+        }
+
+        .comparison-table thead th {
+            padding: 20px 24px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #2B2B2B;
+            text-align: center;
+            border-bottom: 2px solid rgba(0,0,0,0.06);
+        }
+
+        .comparison-table thead th:first-child {
+            text-align: left;
+        }
+
+        .comparison-table thead th.highlight {
+            background: #5B7B6D;
+            color: #fff;
+            border-radius: 16px 16px 0 0;
+            border-bottom: none;
+            position: relative;
+        }
+
+        .comparison-table tbody td {
+            padding: 16px 24px;
+            font-size: 0.9rem;
+            color: #555;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .comparison-table tbody td:first-child {
+            text-align: left;
+            font-weight: 600;
+            color: #2B2B2B;
+        }
+
+        .comparison-table tbody td.highlight {
+            background: rgba(91,123,109,0.04);
+        }
+
+        .comparison-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tbody tr:last-child td.highlight {
+            border-radius: 0 0 16px 16px;
+        }
+
+        .check { color: #5B7B6D; font-weight: 700; font-size: 1.1rem; }
+        .cross { color: #ccc; font-size: 1.1rem; }
+        .partial { color: #D4B282; font-size: 1.1rem; }
+
         /* ========== HOW IT WORKS ========== */
         .how-it-works {
             padding: 100px 0;
@@ -1079,7 +1275,7 @@
         }
 
         .faq-item.active .faq-answer {
-            max-height: 300px;
+            max-height: 500px;
             padding-bottom: 24px;
         }
 
@@ -1253,6 +1449,22 @@
                 margin-right: auto;
             }
 
+            .timeline-track {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+            }
+
+            .timeline-track::before {
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                right: auto;
+                width: 4px;
+                height: auto;
+                transform: translateX(-50%);
+            }
+
             .steps {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -1344,8 +1556,12 @@
                 font-size: 1.8rem;
             }
 
-            .about, .services, .pricing, .how-it-works,
-            .testimonials, .approach, .faq, .cta-section {
+            .faq-item.active .faq-answer {
+                max-height: 500px;
+            }
+
+            .about, .services, .pricing, .timeline, .how-it-works,
+            .testimonials, .comparison, .approach, .faq, .cta-section {
                 padding: 70px 0;
             }
 
@@ -1617,6 +1833,55 @@
                     <a href="mailto:weeninkjoke@hotmail.com?subject=Aanmelding%20Online%20Cursus%20NT2" class="btn btn-outline">Start online</a>
                 </div>
             </div>
+            <div class="pricing-reassurance">
+                <div class="pricing-reassurance-item">
+                    <span>✓</span> Sneller dan een taalschool
+                </div>
+                <div class="pricing-reassurance-item">
+                    <span>✓</span> Persoonlijker dan een app
+                </div>
+                <div class="pricing-reassurance-item">
+                    <span>✓</span> 98% slaagpercentage
+                </div>
+                <div class="pricing-reassurance-item">
+                    <span>✓</span> Geen langdurige verplichting
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TIMELINE ========== -->
+    <section class="timeline" id="tijdlijn">
+        <div class="container text-center">
+            <p class="section-label">Jouw route</p>
+            <h2 class="section-title">Hoe snel leer je Nederlands?</h2>
+            <p class="section-subtitle">
+                Met een duidelijk plan en persoonlijke begeleiding weet je precies waar je staat en waar je naartoe werkt.
+            </p>
+            <div class="timeline-track">
+                <div class="timeline-node">
+                    <div class="timeline-dot">
+                        <div class="hours">80<small>uur</small></div>
+                    </div>
+                    <h3>A1 Niveau</h3>
+                    <p>Je kunt jezelf voorstellen, boodschappen doen en eenvoudige gesprekken voeren</p>
+                </div>
+                <div class="timeline-node">
+                    <div class="timeline-dot">
+                        <div class="hours">120<small>uur</small></div>
+                    </div>
+                    <h3>A2 Niveau</h3>
+                    <p>Je redt je in dagelijkse situaties, op werk en bij de huisarts. Klaar voor inburgering.</p>
+                </div>
+                <div class="timeline-node">
+                    <div class="timeline-dot">
+                        <div class="hours">40<small>weken</small></div>
+                    </div>
+                    <h3>Geslaagd!</h3>
+                    <p>Inburgeringsexamen gehaald. Klaar voor je Nederlandse paspoort.</p>
+                </div>
+            </div>
+            <p class="timeline-note">Tijdsindicatie op basis van gemiddelde resultaten. Jouw route kan sneller zijn met priv&eacute;les.</p>
         </div>
     </section>
 
@@ -1680,20 +1945,20 @@
                 <div class="testimonial-card">
                     <div class="testimonial-stars">★★★★★</div>
                     <p class="testimonial-text">
-                        "Ik was doodsbang voor het inburgeringsexamen. Joke maakte het zo makkelijk dat ik het in een keer haalde. En we hebben heel veel gelachen. Mijn man was jaloers op mijn 'leuke docent'."
+                        "Ik was doodsbang voor het inburgeringsexamen. Bij een taalschool zat ik in een klas met 20 mensen en leerde ik niks. Bij Joke haalde ik het examen in een keer. En we hebben heel veel gelachen."
                     </p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">🇹🇷</div>
                         <div>
                             <div class="testimonial-name">Elif D.</div>
-                            <div class="testimonial-origin">Turkije &middot; Inburgering gehaald</div>
+                            <div class="testimonial-origin">Turkije &middot; Inburgering gehaald in 8 maanden</div>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-stars">★★★★★</div>
                     <p class="testimonial-text">
-                        "Na 3 maanden bij Joke kon ik eindelijk begrijpen wat mijn collega's bij de koffiemachine zeiden. Nu doe ik mee. Soms wensen ze dat ik weer stil was."
+                        "Ik had 2 jaar Duolingo gedaan en kon nog steeds geen gesprek voeren. Na 3 maanden bij Joke begrijp ik mijn collega's bij de koffiemachine. Nu doe ik mee. Soms wensen ze dat ik weer stil was."
                     </p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">🇲🇦</div>
@@ -1706,16 +1971,95 @@
                 <div class="testimonial-card">
                     <div class="testimonial-stars">★★★★★</div>
                     <p class="testimonial-text">
-                        "Joke is de beste docent die ik heb gehad. Ze is geduldig, grappig en ze geeft niet op. Zelfs als ik 'de' en 'het' weer door elkaar haalde voor de 100ste keer."
+                        "Ik durfde niet te praten in een groep, ik schaamde me voor mijn fouten. Joke maakte het veilig. Nu spreek ik Nederlands op mijn werk en met de juf van mijn kinderen. Zelfs 'de' en 'het' gaat steeds beter."
                     </p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">🇺🇦</div>
                         <div>
                             <div class="testimonial-name">Oksana P.</div>
-                            <div class="testimonial-origin">Oekraine &middot; Conversatielessen</div>
+                            <div class="testimonial-origin">Oekraine &middot; Van nul naar A2 in 5 maanden</div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== COMPARISON ========== -->
+    <section class="comparison" id="vergelijking">
+        <div class="container text-center">
+            <p class="section-label">Vergelijk</p>
+            <h2 class="section-title">Joke vs. taalschool vs. zelf leren</h2>
+            <p class="section-subtitle">
+                Niet alle manieren om Nederlands te leren zijn gelijk. Dit zijn de verschillen.
+            </p>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="highlight">Bij Joke</th>
+                            <th>Taalschool</th>
+                            <th>Zelf leren (app)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Persoonlijk lesplan</td>
+                            <td class="highlight"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Kleine groepen (max 6)</td>
+                            <td class="highlight"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span> 15-25 personen</td>
+                            <td>n.v.t.</td>
+                        </tr>
+                        <tr>
+                            <td>Echte gespreksoefening</td>
+                            <td class="highlight"><span class="check">&#10003;</span></td>
+                            <td><span class="partial">~</span> Beperkt</td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Flexibele planning</td>
+                            <td class="highlight"><span class="check">&#10003;</span></td>
+                            <td><span class="cross">&#10007;</span> Vast rooster</td>
+                            <td><span class="check">&#10003;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Examengericht (inburgering)</td>
+                            <td class="highlight"><span class="check">&#10003;</span></td>
+                            <td><span class="partial">~</span> Algemeen</td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Direct feedback op fouten</td>
+                            <td class="highlight"><span class="check">&#10003;</span></td>
+                            <td><span class="partial">~</span> Weinig aandacht</td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Slaagpercentage</td>
+                            <td class="highlight"><strong style="color:#5B7B6D">98%</strong></td>
+                            <td>~70%</td>
+                            <td>Onbekend</td>
+                        </tr>
+                        <tr>
+                            <td>Tijd tot A2 niveau</td>
+                            <td class="highlight"><strong style="color:#5B7B6D">120 uur</strong></td>
+                            <td>200+ uur</td>
+                            <td>Onduidelijk</td>
+                        </tr>
+                        <tr>
+                            <td>Hulp buiten de les</td>
+                            <td class="highlight"><span class="check">&#10003;</span> Via e-mail/app</td>
+                            <td><span class="cross">&#10007;</span></td>
+                            <td><span class="cross">&#10007;</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
@@ -1797,7 +2141,7 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Dat verschilt per persoon. Sommige cursisten halen A2-niveau in 6 maanden, anderen hebben een jaar nodig. Het hangt af van je moedertaal, hoeveel je oefent en hoe vaak je les hebt. Maar met goede begeleiding en doorzettingsvermogen gaat het sneller dan je denkt.</p>
+                        <p>A1 niveau bereik je in ongeveer 80 lesuren. Voor A2 (het niveau dat je nodig hebt voor inburgering) heb je zo'n 120 lesuren nodig. De meeste cursisten slagen binnen 40 weken. Met priv&eacute;les gaat het vaak nog sneller, omdat elke minuut op jou is afgestemd.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -1834,6 +2178,51 @@
                     </button>
                     <div class="faq-answer">
                         <p>Ja, ik bied een gratis kennismakingsgesprek van 15 minuten aan. Zo kunnen we kijken of het klikt en bespreken wat je nodig hebt. Geen verplichting, gewoon een goed gesprek.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Kan ik niet beter Nederlands leren via een app zoals Duolingo?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Apps zijn leuk voor woordjes leren. Maar ze leren je niet om een echt gesprek te voeren, een e-mail te schrijven of het inburgeringsexamen te halen. Veel van mijn cursisten hebben eerst een app geprobeerd en kwamen er achter dat ze nog steeds niet durfden te praten. Bij mij oefen je vanaf dag 1 met echte situaties en krijg je direct feedback.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Ik heb al eerder lessen gehad bij een taalschool en het werkte niet. Waarom zou het bij jou anders zijn?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Bij een taalschool zit je vaak in een grote groep (15-25 personen) en krijg je weinig persoonlijke aandacht. De les gaat door, of je het snapt of niet. Bij mij is dat anders. In priv&eacute;les is 100% van de tijd voor jou. In groepslessen zitten maximaal 6 personen. Ik pas mijn tempo en uitleg aan op wat jij nodig hebt. Daar zit het verschil.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Ik durf niet te praten in een groep. Wat als ik fouten maak?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Fouten maken is niet erg. Fouten maken is het hele punt. Zo leer je het snelst. Bij mij is de sfeer veilig en ontspannen. Niemand lacht je uit. Sterker nog: we lachen samen. Over mijn fouten, over jouw fouten, over de rare uitzonderingen in de Nederlandse taal. Veel cursisten die hier doodsbang binnenkwamen, praten na een paar weken honderduit.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Ik werk fulltime. Heb ik wel tijd voor NT2 lessen?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Juist voor drukke mensen is priv&eacute;les of online les ideaal. We plannen de les op een moment dat jou past: 's avonds, in het weekend of tijdens je lunchpauze. En omdat elke les persoonlijk is afgestemd, verlies je geen tijd aan stof die je al kent. Elke minuut telt.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Waarom jou kiezen in plaats van een taalschool?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Bij een taalschool ben je een nummer. Bij mij ben je een persoon. Ik ken je naam, je achtergrond, je doel en je sterke punten. Na 21 jaar en duizenden cursisten weet ik precies wat werkt en wat niet. Mijn slaagpercentage is 98%. Bij de gemiddelde taalschool is dat rond de 70%. Dat verschil zit in persoonlijke aandacht.</p>
                     </div>
                 </div>
             </div>
