@@ -1,0 +1,2600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Your Dutch - Interactive Exercises | Joke Weenink NT2</title>
+    <meta name="description" content="Practice Dutch meeting phrases with fun interactive exercises. Learn sentences for meetings, agendas and status updates. Free practice!">
+    <meta name="keywords" content="Dutch exercises, practice Dutch, NT2 exercises, Dutch meeting phrases, learn Dutch online, Dutch for work">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Practice Your Dutch - Interactive Exercises | Joke Weenink NT2">
+    <meta property="og:description" content="Practice Dutch meeting phrases with fun interactive exercises. Learn sentences for meetings, agendas and status updates. Free practice!">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="nl" href="https://domestica-international.github.io/joke-weenink-nt2/oefeningen.html">
+    <link rel="alternate" hreflang="en" href="https://domestica-international.github.io/joke-weenink-nt2/en/exercises.html">
+    <link rel="alternate" hreflang="pl" href="https://domestica-international.github.io/joke-weenink-nt2/pl/cwiczenia.html">
+    <link rel="alternate" hreflang="ar" href="https://domestica-international.github.io/joke-weenink-nt2/ar/exercises.html">
+    <link rel="alternate" hreflang="zh" href="https://domestica-international.github.io/joke-weenink-nt2/zh/exercises.html">
+    <link rel="alternate" hreflang="x-default" href="https://domestica-international.github.io/joke-weenink-nt2/oefeningen.html">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Quiz",
+        "name": "Dutch Meeting Exercises",
+        "description": "Interactive exercises to practice Dutch meeting phrases",
+        "educationalLevel": "A2-B1",
+        "inLanguage": "nl",
+        "provider": {
+            "@type": "Person",
+            "name": "Joke Weenink",
+            "jobTitle": "NT2 Teacher"
+        }
+    }
+    </script>
+
+    <style>
+        /* ========== RESET & BASE ========== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: #3D3D3D;
+            background: #FAFAF7;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #2B2B2B;
+            line-height: 1.25;
+        }
+
+        a {
+            color: #5B7B6D;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #3D5A4C;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ========== NAV ========== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(250, 250, 247, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            transition: box-shadow 0.3s;
+        }
+
+        .nav.scrolled {
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #2B2B2B;
+        }
+
+        .nav-logo span {
+            color: #5B7B6D;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #555;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #5B7B6D;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: #2B2B2B;
+        }
+
+        .nav-cta {
+            padding: 10px 24px;
+            background: #5B7B6D;
+            color: #fff !important;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .nav-cta:hover {
+            background: #4A6559;
+            color: #fff !important;
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #2B2B2B;
+            margin: 6px 0;
+            transition: all 0.3s;
+            border-radius: 2px;
+        }
+
+        /* ========== LANGUAGE DROPDOWN ========== */
+        .lang-dropdown {
+            position: relative;
+        }
+
+        .lang-dropdown-btn {
+            background: none;
+            border: 1px solid #5B7B6D;
+            padding: 5px 14px;
+            border-radius: 50px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #5B7B6D;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .lang-dropdown-btn:hover {
+            background: #5B7B6D;
+            color: #fff;
+        }
+
+        .lang-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            list-style: none;
+            min-width: 160px;
+            padding: 8px 0;
+            z-index: 200;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .lang-dropdown.active .lang-dropdown-menu {
+            display: block;
+        }
+
+        .lang-dropdown-menu li a,
+        .lang-dropdown-menu li span {
+            display: block;
+            padding: 10px 20px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: #555;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .lang-dropdown-menu li a:hover {
+            background: #F2F7F5;
+            color: #2B2B2B;
+        }
+
+        .lang-dropdown-menu li a::after {
+            display: none !important;
+        }
+
+        .lang-active {
+            color: #5B7B6D !important;
+            font-weight: 600 !important;
+            background: rgba(91,123,109,0.06);
+            pointer-events: none;
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(165deg, #F2F7F5 0%, #FAFAF7 40%, #FFF8F0 100%);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(91,123,109,0.06) 0%, transparent 70%);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212,178,130,0.08) 0%, transparent 70%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(91,123,109,0.1);
+            color: #5B7B6D;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 em {
+            color: #5B7B6D;
+            font-style: italic;
+        }
+
+        .hero-sub {
+            font-size: 1.15rem;
+            color: #6B6B6B;
+            line-height: 1.8;
+            margin-bottom: 36px;
+        }
+
+        /* ========== PROGRESS TRACKER ========== */
+        .progress-tracker {
+            padding: 48px 0 24px;
+            background: #FAFAF7;
+            position: sticky;
+            top: 72px;
+            z-index: 50;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            transition: box-shadow 0.3s;
+        }
+
+        .progress-tracker.has-shadow {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        }
+
+        .progress-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .progress-dot {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #E8E8E4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #999;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .progress-dot.active {
+            background: rgba(91,123,109,0.15);
+            color: #5B7B6D;
+            transform: scale(1.1);
+        }
+
+        .progress-dot.completed {
+            background: #5B7B6D;
+            color: #fff;
+            transform: scale(1);
+        }
+
+        .progress-dot.completed::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            border: 2px solid #5B7B6D;
+            opacity: 0.3;
+            animation: pulseRing 2s ease-out infinite;
+        }
+
+        @keyframes pulseRing {
+            0% { transform: scale(1); opacity: 0.3; }
+            100% { transform: scale(1.3); opacity: 0; }
+        }
+
+        .progress-connector {
+            width: 32px;
+            height: 3px;
+            background: #E8E8E4;
+            border-radius: 3px;
+            transition: background 0.5s;
+        }
+
+        .progress-connector.filled {
+            background: #5B7B6D;
+        }
+
+        .progress-text {
+            text-align: center;
+            margin-top: 16px;
+            font-size: 0.9rem;
+            color: #6B6B6B;
+            font-weight: 500;
+        }
+
+        .progress-text strong {
+            color: #5B7B6D;
+        }
+
+        /* ========== EXERCISE CARDS ========== */
+        .exercises-section {
+            padding: 48px 0 80px;
+        }
+
+        .exercise-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 48px 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.04);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .exercise-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #5B7B6D, #8DB5A4);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .exercise-card.active-exercise::before {
+            opacity: 1;
+        }
+
+        .exercise-card.completed-card {
+            border-color: rgba(91,123,109,0.2);
+        }
+
+        .exercise-card.completed-card::before {
+            opacity: 1;
+            background: #5B7B6D;
+        }
+
+        .exercise-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 8px;
+        }
+
+        .exercise-number {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #5B7B6D, #4A6559);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .exercise-header h2 {
+            font-size: 1.6rem;
+            margin: 0;
+        }
+
+        .exercise-description {
+            color: #6B6B6B;
+            font-size: 1rem;
+            margin-bottom: 32px;
+            padding-left: 64px;
+        }
+
+        .exercise-score {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(91,123,109,0.08);
+            color: #5B7B6D;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        /* ========== EXERCISE 1: FILL IN THE BLANK ========== */
+        .sentence-item {
+            background: #FAFAF7;
+            border-radius: 14px;
+            padding: 24px;
+            margin-bottom: 16px;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .sentence-item.correct {
+            border-color: #5B7B6D;
+            background: rgba(91,123,109,0.05);
+        }
+
+        .sentence-item.incorrect {
+            border-color: #D4645C;
+            background: rgba(212,100,92,0.05);
+        }
+
+        .sentence-text {
+            font-size: 1.15rem;
+            margin-bottom: 16px;
+            color: #2B2B2B;
+            line-height: 1.6;
+        }
+
+        .sentence-blank {
+            display: inline-block;
+            min-width: 120px;
+            border-bottom: 3px dashed #5B7B6D;
+            padding: 2px 8px;
+            margin: 0 4px;
+            text-align: center;
+            font-weight: 600;
+            color: #5B7B6D;
+            transition: all 0.3s;
+        }
+
+        .sentence-blank.filled {
+            border-bottom-style: solid;
+        }
+
+        .sentence-blank.filled.wrong {
+            border-color: #D4645C;
+            color: #D4645C;
+        }
+
+        .sentence-options {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .option-btn {
+            padding: 10px 22px;
+            border-radius: 50px;
+            border: 2px solid #E0DDD8;
+            background: #fff;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #555;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .option-btn:hover:not(:disabled) {
+            border-color: #5B7B6D;
+            color: #5B7B6D;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(91,123,109,0.15);
+        }
+
+        .option-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .option-btn.selected-correct {
+            background: #5B7B6D;
+            color: #fff;
+            border-color: #5B7B6D;
+        }
+
+        .option-btn.selected-wrong {
+            background: #D4645C;
+            color: #fff;
+            border-color: #D4645C;
+            animation: shake 0.5s ease;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20% { transform: translateX(-6px); }
+            40% { transform: translateX(6px); }
+            60% { transform: translateX(-4px); }
+            80% { transform: translateX(4px); }
+        }
+
+        .feedback-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-left: 12px;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .feedback-icon.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .feedback-icon.correct-icon {
+            background: #5B7B6D;
+            color: #fff;
+        }
+
+        .feedback-icon.wrong-icon {
+            background: #D4645C;
+            color: #fff;
+        }
+
+        /* ========== EXERCISE 2: DRAG & DROP ========== */
+        .drag-area {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .drag-item {
+            background: #fff;
+            border: 2px solid #E0DDD8;
+            border-radius: 14px;
+            padding: 18px 24px;
+            cursor: grab;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            user-select: none;
+            touch-action: none;
+        }
+
+        .drag-item:active {
+            cursor: grabbing;
+        }
+
+        .drag-item:hover {
+            border-color: #5B7B6D;
+            box-shadow: 0 4px 16px rgba(91,123,109,0.12);
+        }
+
+        .drag-item.dragging {
+            opacity: 0.5;
+            transform: scale(0.98);
+        }
+
+        .drag-item.drag-over {
+            border-color: #5B7B6D;
+            background: rgba(91,123,109,0.03);
+            border-style: dashed;
+        }
+
+        .drag-item.correct-order {
+            border-color: #5B7B6D;
+            background: rgba(91,123,109,0.05);
+        }
+
+        .drag-item.wrong-order {
+            border-color: #D4645C;
+            background: rgba(212,100,92,0.05);
+        }
+
+        .drag-handle {
+            color: #bbb;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            letter-spacing: 2px;
+        }
+
+        .drag-number {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #E8E8E4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #999;
+            flex-shrink: 0;
+            transition: all 0.3s;
+        }
+
+        .drag-item.correct-order .drag-number {
+            background: #5B7B6D;
+            color: #fff;
+        }
+
+        .drag-text {
+            flex: 1;
+            font-size: 1rem;
+            color: #2B2B2B;
+        }
+
+        .phase-match-area {
+            margin-top: 32px;
+        }
+
+        .phase-match-area h3 {
+            font-size: 1.15rem;
+            margin-bottom: 16px;
+        }
+
+        .match-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .match-phase {
+            background: #FAFAF7;
+            padding: 14px 18px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2B2B2B;
+            text-align: right;
+        }
+
+        .match-arrow {
+            color: #ccc;
+            font-size: 1.2rem;
+        }
+
+        .match-select {
+            padding: 12px 16px;
+            border: 2px solid #E0DDD8;
+            border-radius: 10px;
+            background: #fff;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.9rem;
+            color: #555;
+            cursor: pointer;
+            transition: all 0.3s;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            padding-right: 36px;
+        }
+
+        .match-select:focus {
+            outline: none;
+            border-color: #5B7B6D;
+        }
+
+        .match-select.correct-match {
+            border-color: #5B7B6D;
+            background-color: rgba(91,123,109,0.05);
+        }
+
+        .match-select.wrong-match {
+            border-color: #D4645C;
+            background-color: rgba(212,100,92,0.05);
+        }
+
+        .btn-check {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            background: #5B7B6D;
+            color: #fff;
+            margin-top: 16px;
+        }
+
+        .btn-check:hover {
+            background: #4A6559;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(91,123,109,0.3);
+        }
+
+        .btn-check:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* ========== EXERCISE 3: OPINION MATCHING ========== */
+        .opinion-card {
+            background: #FAFAF7;
+            border-radius: 14px;
+            padding: 28px;
+            margin-bottom: 20px;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .opinion-card.answered {
+            pointer-events: none;
+        }
+
+        .opinion-card.answered.correct {
+            border-color: #5B7B6D;
+            background: rgba(91,123,109,0.05);
+        }
+
+        .opinion-card.answered.incorrect {
+            border-color: #D4645C;
+            background: rgba(212,100,92,0.05);
+        }
+
+        .opinion-statement {
+            font-size: 1.1rem;
+            color: #2B2B2B;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .opinion-label {
+            font-size: 0.82rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+
+        .opinion-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .opinion-option {
+            padding: 14px 20px;
+            border-radius: 12px;
+            border: 2px solid #E0DDD8;
+            background: #fff;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            color: #555;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: left;
+        }
+
+        .opinion-option:hover:not(:disabled) {
+            border-color: #5B7B6D;
+            color: #5B7B6D;
+        }
+
+        .opinion-option.selected-correct {
+            background: #5B7B6D;
+            color: #fff;
+            border-color: #5B7B6D;
+        }
+
+        .opinion-option.selected-wrong {
+            background: #D4645C;
+            color: #fff;
+            border-color: #D4645C;
+            animation: shake 0.5s ease;
+        }
+
+        .opinion-option.show-correct {
+            border-color: #5B7B6D;
+            color: #5B7B6D;
+            font-weight: 600;
+        }
+
+        /* ========== EXERCISE 4: SENTENCE BUILDER ========== */
+        .builder-area {
+            margin-bottom: 24px;
+        }
+
+        .builder-row {
+            margin-bottom: 16px;
+        }
+
+        .builder-row-label {
+            font-size: 0.78rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .builder-options {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .builder-block {
+            padding: 12px 22px;
+            border-radius: 12px;
+            border: 2px solid #E0DDD8;
+            background: #fff;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            color: #555;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .builder-block:hover {
+            border-color: #5B7B6D;
+            color: #5B7B6D;
+            transform: translateY(-2px);
+        }
+
+        .builder-block.selected {
+            background: #5B7B6D;
+            color: #fff;
+            border-color: #5B7B6D;
+            box-shadow: 0 4px 12px rgba(91,123,109,0.2);
+        }
+
+        .builder-preview {
+            background: linear-gradient(135deg, #F2F7F5, #FFF8F0);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            border: 2px dashed #E0DDD8;
+            transition: all 0.5s;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .builder-preview.complete {
+            border-style: solid;
+            border-color: #5B7B6D;
+            background: linear-gradient(135deg, rgba(91,123,109,0.05), rgba(212,178,130,0.05));
+        }
+
+        .builder-preview-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #2B2B2B;
+            line-height: 1.6;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.4s ease;
+        }
+
+        .builder-preview-text.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .builder-preview-placeholder {
+            color: #bbb;
+            font-size: 1rem;
+            font-style: italic;
+        }
+
+        .builder-celebration {
+            font-size: 2rem;
+            margin-top: 8px;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .builder-celebration.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .builder-reset {
+            margin-top: 16px;
+            padding: 10px 24px;
+            border-radius: 50px;
+            border: 2px solid #E0DDD8;
+            background: transparent;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #999;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .builder-reset:hover {
+            border-color: #5B7B6D;
+            color: #5B7B6D;
+        }
+
+        .sentences-built-count {
+            margin-top: 16px;
+            font-size: 0.9rem;
+            color: #6B6B6B;
+        }
+
+        /* ========== EXERCISE 5: QUICK FIRE ========== */
+        .quickfire-area {
+            text-align: center;
+        }
+
+        .quickfire-timer {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(212,178,130,0.15);
+            color: #B8924A;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .quickfire-timer.warning {
+            background: rgba(212,100,92,0.1);
+            color: #D4645C;
+            animation: timerPulse 1s infinite;
+        }
+
+        @keyframes timerPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .quickfire-question {
+            background: #FAFAF7;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+
+        .quickfire-q-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #2B2B2B;
+            margin-bottom: 8px;
+        }
+
+        .quickfire-q-number {
+            font-size: 0.8rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        .quickfire-options {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .quickfire-btn {
+            padding: 14px 28px;
+            border-radius: 14px;
+            border: 2px solid #E0DDD8;
+            background: #fff;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            color: #555;
+            cursor: pointer;
+            transition: all 0.3s;
+            min-width: 180px;
+        }
+
+        .quickfire-btn:hover:not(:disabled) {
+            border-color: #5B7B6D;
+            color: #5B7B6D;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(91,123,109,0.15);
+        }
+
+        .quickfire-btn.qf-correct {
+            background: #5B7B6D;
+            color: #fff;
+            border-color: #5B7B6D;
+        }
+
+        .quickfire-btn.qf-wrong {
+            background: #D4645C;
+            color: #fff;
+            border-color: #D4645C;
+            animation: shake 0.5s ease;
+        }
+
+        .quickfire-result {
+            margin-top: 24px;
+            font-size: 1rem;
+            color: #6B6B6B;
+        }
+
+        .quickfire-start-btn {
+            padding: 16px 40px;
+            border-radius: 50px;
+            border: none;
+            background: linear-gradient(135deg, #5B7B6D, #4A6559);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .quickfire-start-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(91,123,109,0.3);
+        }
+
+        /* ========== EXERCISE 6: DIALOGUE ========== */
+        .dialogue-area {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .dialogue-line {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+
+        .dialogue-speaker {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .speaker-chair {
+            background: linear-gradient(135deg, #5B7B6D, #4A6559);
+            color: #fff;
+        }
+
+        .speaker-participant {
+            background: linear-gradient(135deg, #D4B282, #B8924A);
+            color: #fff;
+        }
+
+        .dialogue-bubble {
+            background: #FAFAF7;
+            border-radius: 14px;
+            padding: 16px 20px;
+            flex: 1;
+            position: relative;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .dialogue-bubble.correct {
+            border-color: #5B7B6D;
+            background: rgba(91,123,109,0.05);
+        }
+
+        .dialogue-bubble.incorrect {
+            border-color: #D4645C;
+            background: rgba(212,100,92,0.05);
+        }
+
+        .dialogue-speaker-name {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .dialogue-text {
+            font-size: 1.05rem;
+            color: #2B2B2B;
+            line-height: 1.6;
+        }
+
+        .dialogue-blank-select {
+            display: inline-block;
+            padding: 4px 12px;
+            border: 2px solid #5B7B6D;
+            border-radius: 8px;
+            background: #fff;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            color: #5B7B6D;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            font-weight: 600;
+            min-width: 110px;
+            text-align: center;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%235B7B6D' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 8px center;
+            padding-right: 26px;
+        }
+
+        .dialogue-blank-select.correct-fill {
+            background-color: rgba(91,123,109,0.1);
+            border-color: #5B7B6D;
+        }
+
+        .dialogue-blank-select.wrong-fill {
+            background-color: rgba(212,100,92,0.1);
+            border-color: #D4645C;
+            color: #D4645C;
+        }
+
+        /* ========== RESULTS SCREEN ========== */
+        .results-section {
+            padding: 80px 0;
+            text-align: center;
+            display: none;
+        }
+
+        .results-section.visible {
+            display: block;
+        }
+
+        .results-card {
+            background: #fff;
+            border-radius: 24px;
+            padding: 56px 48px;
+            max-width: 580px;
+            margin: 0 auto;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+            border: 2px solid rgba(91,123,109,0.1);
+        }
+
+        .results-emoji {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: bounceIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .results-title {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .results-score {
+            font-size: 3.5rem;
+            font-family: 'Playfair Display', serif;
+            color: #5B7B6D;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .results-label {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+        }
+
+        .results-message {
+            font-size: 1.1rem;
+            color: #6B6B6B;
+            margin-bottom: 36px;
+            line-height: 1.7;
+        }
+
+        .results-cta {
+            display: inline-block;
+            padding: 16px 36px;
+            border-radius: 50px;
+            background: #5B7B6D;
+            color: #fff;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .results-cta:hover {
+            background: #4A6559;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(91,123,109,0.3);
+        }
+
+        .results-retry {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            border: 2px solid #E0DDD8;
+            background: transparent;
+            color: #6B6B6B;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-left: 12px;
+        }
+
+        .results-retry:hover {
+            border-color: #5B7B6D;
+            color: #5B7B6D;
+        }
+
+        /* ========== CONFETTI ========== */
+        .confetti-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            animation: confettiFall 3s linear forwards;
+        }
+
+        @keyframes confettiFall {
+            0% {
+                transform: translateY(-10vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(110vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: #2B2B2B;
+            color: rgba(255,255,255,0.6);
+            padding: 60px 0 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand span {
+            color: #8DB5A4;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            max-width: 320px;
+        }
+
+        .footer h4 {
+            color: #fff;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.88rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #8DB5A4;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: rgba(250,250,247,0.98);
+                backdrop-filter: blur(12px);
+                padding: 24px;
+                gap: 20px;
+                border-bottom: 1px solid rgba(0,0,0,0.06);
+            }
+
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .exercise-card {
+                padding: 32px 24px;
+            }
+
+            .exercise-description {
+                padding-left: 0;
+            }
+
+            .match-row {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+
+            .match-phase {
+                text-align: left;
+            }
+
+            .match-arrow {
+                display: none;
+            }
+
+            .quickfire-options {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .quickfire-btn {
+                width: 100%;
+                max-width: 320px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+
+            .results-card {
+                padding: 40px 24px;
+            }
+
+            .lang-dropdown-menu {
+                position: fixed;
+                top: auto;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                border-radius: 20px 20px 0 0;
+                min-width: 100%;
+                padding: 16px 0;
+            }
+
+            .lang-dropdown.active .lang-dropdown-menu {
+                display: block;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 130px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .progress-inner {
+                gap: 8px;
+            }
+
+            .progress-dot {
+                width: 36px;
+                height: 36px;
+                font-size: 0.8rem;
+            }
+
+            .progress-connector {
+                width: 16px;
+            }
+
+            .exercise-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .sentence-text {
+                font-size: 1rem;
+            }
+
+            .option-btn,
+            .builder-block {
+                padding: 10px 16px;
+                font-size: 0.88rem;
+            }
+
+            .builder-preview {
+                padding: 24px;
+            }
+
+            .builder-preview-text {
+                font-size: 1.15rem;
+            }
+
+            .quickfire-q-text {
+                font-size: 1.15rem;
+            }
+
+            .dialogue-line {
+                gap: 10px;
+            }
+
+            .dialogue-speaker {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+
+            .results-score {
+                font-size: 2.8rem;
+            }
+
+            .results-title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">Joke <span>Weenink</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#lessons">Lessons</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li class="lang-dropdown">
+                    <button class="lang-dropdown-btn" aria-label="Choose language">🌐 EN ▾</button>
+                    <ul class="lang-dropdown-menu">
+                        <li><a href="../oefeningen.html">🇳🇱 Nederlands</a></li>
+                        <li><a href="exercises.html" class="lang-active">🇬🇧 English</a></li>
+                        <li><a href="../pl/cwiczenia.html">🇵🇱 Polski</a></li>
+                        <li><a href="../ar/exercises.html">🇸🇦 العربية</a></li>
+                        <li><a href="../zh/exercises.html">🇨🇳 中文</a></li>
+                    </ul>
+                </li>
+                <li><a href="mailto:weeninkjoke@hotmail.com" class="nav-cta">Free introduction</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge"><span>&#9997;</span> Interactive practice</div>
+                <h1>Practice your <em>Dutch</em></h1>
+                <p class="hero-sub">
+                    Train your meeting Dutch with 6 fun exercises. Learn the right phrases for meetings, agendas and status updates. How far can you get?
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROGRESS TRACKER ========== -->
+    <div class="progress-tracker" id="progressTracker">
+        <div class="container">
+            <div class="progress-inner">
+                <div class="progress-dot active" data-exercise="1" onclick="scrollToExercise(1)">1</div>
+                <div class="progress-connector" id="conn1"></div>
+                <div class="progress-dot" data-exercise="2" onclick="scrollToExercise(2)">2</div>
+                <div class="progress-connector" id="conn2"></div>
+                <div class="progress-dot" data-exercise="3" onclick="scrollToExercise(3)">3</div>
+                <div class="progress-connector" id="conn3"></div>
+                <div class="progress-dot" data-exercise="4" onclick="scrollToExercise(4)">4</div>
+                <div class="progress-connector" id="conn4"></div>
+                <div class="progress-dot" data-exercise="5" onclick="scrollToExercise(5)">5</div>
+                <div class="progress-connector" id="conn5"></div>
+                <div class="progress-dot" data-exercise="6" onclick="scrollToExercise(6)">6</div>
+            </div>
+            <p class="progress-text"><strong id="completedCount">0</strong> of 6 exercises completed</p>
+        </div>
+    </div>
+
+    <!-- ========== EXERCISES ========== -->
+    <section class="exercises-section">
+        <div class="container">
+
+            <!-- EXERCISE 1: Fill in the blank -->
+            <div class="exercise-card active-exercise" id="exercise1">
+                <div class="exercise-header">
+                    <div class="exercise-number">1</div>
+                    <h2>Meeting Phrases</h2>
+                </div>
+                <p class="exercise-description">Choose the correct word to complete the sentence. Read carefully!</p>
+                <div class="exercise-score" id="score1">Score: 0 / 5</div>
+                <div id="ex1-sentences"></div>
+            </div>
+
+            <!-- EXERCISE 2: Drag & Drop ordering -->
+            <div class="exercise-card" id="exercise2">
+                <div class="exercise-header">
+                    <div class="exercise-number">2</div>
+                    <h2>Agenda Exercise</h2>
+                </div>
+                <p class="exercise-description">Drag the meeting phases into the correct order. Then match the right phrase to each phase.</p>
+
+                <h3 style="font-size: 1rem; color: #6B6B6B; margin-bottom: 12px;">Step 1: Put in the correct order</h3>
+                <div class="drag-area" id="dragArea"></div>
+                <button class="btn-check" id="checkOrderBtn" onclick="checkDragOrder()">Check order</button>
+
+                <div class="phase-match-area" id="phaseMatchArea" style="display: none;">
+                    <h3>Step 2: Match the right phrase to each phase</h3>
+                    <div id="matchRows"></div>
+                    <button class="btn-check" id="checkMatchBtn" onclick="checkMatches()">Check answers</button>
+                </div>
+            </div>
+
+            <!-- EXERCISE 3: Opinion matching -->
+            <div class="exercise-card" id="exercise3">
+                <div class="exercise-header">
+                    <div class="exercise-number">3</div>
+                    <h2>What Do You Think?</h2>
+                </div>
+                <p class="exercise-description">You hear a proposal in a meeting. Choose the correct response and give a reason.</p>
+                <div class="exercise-score" id="score3">Score: 0 / 3</div>
+                <div id="ex3-opinions"></div>
+            </div>
+
+            <!-- EXERCISE 4: Sentence Builder -->
+            <div class="exercise-card" id="exercise4">
+                <div class="exercise-header">
+                    <div class="exercise-number">4</div>
+                    <h2>Status Update Builder</h2>
+                </div>
+                <p class="exercise-description">Build your own status update! Click on blocks to create a sentence. Try to make at least 3 different sentences.</p>
+
+                <div class="builder-area">
+                    <div class="builder-row">
+                        <div class="builder-row-label">Subject</div>
+                        <div class="builder-options" id="builderRow1">
+                            <button class="builder-block" data-row="1" data-value="Ik werk aan" onclick="selectBlock(this)">Ik werk aan</button>
+                            <button class="builder-block" data-row="1" data-value="Ik ben klaar met" onclick="selectBlock(this)">Ik ben klaar met</button>
+                            <button class="builder-block" data-row="1" data-value="Ik heb hulp nodig met" onclick="selectBlock(this)">Ik heb hulp nodig met</button>
+                        </div>
+                    </div>
+                    <div class="builder-row">
+                        <div class="builder-row-label">Task</div>
+                        <div class="builder-options" id="builderRow2">
+                            <button class="builder-block" data-row="2" data-value="de presentatie" onclick="selectBlock(this)">de presentatie</button>
+                            <button class="builder-block" data-row="2" data-value="het rapport" onclick="selectBlock(this)">het rapport</button>
+                            <button class="builder-block" data-row="2" data-value="de planning" onclick="selectBlock(this)">de planning</button>
+                            <button class="builder-block" data-row="2" data-value="het project" onclick="selectBlock(this)">het project</button>
+                        </div>
+                    </div>
+                    <div class="builder-row">
+                        <div class="builder-row-label">Status</div>
+                        <div class="builder-options" id="builderRow3">
+                            <button class="builder-block" data-row="3" data-value="Het gaat goed." onclick="selectBlock(this)">Het gaat goed.</button>
+                            <button class="builder-block" data-row="3" data-value="Het gaat niet zo goed." onclick="selectBlock(this)">Het gaat niet zo goed.</button>
+                            <button class="builder-block" data-row="3" data-value="Het is bijna klaar." onclick="selectBlock(this)">Het is bijna klaar.</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="builder-preview" id="builderPreview">
+                    <p class="builder-preview-placeholder" id="builderPlaceholder">Click above to build your sentence...</p>
+                    <p class="builder-preview-text" id="builderText"></p>
+                    <div class="builder-celebration" id="builderCelebration">&#127881;</div>
+                </div>
+                <button class="builder-reset" onclick="resetBuilder()">Start over</button>
+                <p class="sentences-built-count">Sentences built: <strong id="sentencesBuilt">0</strong> / 3</p>
+            </div>
+
+            <!-- EXERCISE 5: Quick-fire quiz -->
+            <div class="exercise-card" id="exercise5">
+                <div class="exercise-header">
+                    <div class="exercise-number">5</div>
+                    <h2>Yes or No?</h2>
+                </div>
+                <p class="exercise-description">Quick questions! Choose the correct answer. How fast can you respond?</p>
+
+                <div class="quickfire-area" id="quickfireArea">
+                    <p style="color: #6B6B6B; margin-bottom: 20px;">You'll get 6 questions. The timer is running. Ready?</p>
+                    <button class="quickfire-start-btn" id="qfStartBtn" onclick="startQuickfire()">Start!</button>
+                </div>
+            </div>
+
+            <!-- EXERCISE 6: Complete the dialogue -->
+            <div class="exercise-card" id="exercise6">
+                <div class="exercise-header">
+                    <div class="exercise-number">6</div>
+                    <h2>Mini Meeting</h2>
+                </div>
+                <p class="exercise-description">Complete the meeting conversation. Choose the correct word for each blank.</p>
+
+                <div class="dialogue-area" id="dialogueArea"></div>
+                <div style="text-align: center;">
+                    <button class="btn-check" id="checkDialogueBtn" onclick="checkDialogue()">Check answers</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== RESULTS ========== -->
+    <section class="results-section" id="resultsSection">
+        <div class="container">
+            <div class="results-card">
+                <div class="results-emoji" id="resultsEmoji"></div>
+                <h2 class="results-title" id="resultsTitle"></h2>
+                <div class="results-score" id="resultsScore"></div>
+                <p class="results-label">percent correct</p>
+                <p class="results-message" id="resultsMessage"></p>
+                <a href="mailto:weeninkjoke@hotmail.com" class="results-cta">Book a free introduction</a>
+                <button class="results-retry" onclick="location.reload()">Try again</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">Joke <span>Weenink</span></div>
+                    <p class="footer-desc">
+                        NT2 teacher by passion. I help you learn Dutch in a way that suits you. With patience, humour and a solid lesson plan.
+                    </p>
+                </div>
+                <div>
+                    <h4>Pages</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Joke</a></li>
+                        <li><a href="articles.html">Articles</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:weeninkjoke@hotmail.com">weeninkjoke@hotmail.com</a></li>
+                        <li><a href="mailto:weeninkjoke@hotmail.com">Free introduction</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Joke Weenink NT2. All rights reserved.</span>
+                <span>Made with love for everyone who wants to learn Dutch</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== CONFETTI CONTAINER ========== -->
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+    (function() {
+        'use strict';
+
+        // ===== GLOBAL STATE =====
+        const state = {
+            completed: [false, false, false, false, false, false],
+            scores: [0, 0, 0, 0, 0, 0],
+            maxScores: [5, 8, 3, 3, 6, 5],
+            sentencesBuilt: new Set(),
+            builderSelections: { 1: null, 2: null, 3: null }
+        };
+
+        // ===== NAV =====
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // ===== LANGUAGE DROPDOWN =====
+        document.querySelectorAll('.lang-dropdown-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                btn.closest('.lang-dropdown').classList.toggle('active');
+            });
+        });
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.lang-dropdown').forEach(d => d.classList.remove('active'));
+        });
+
+        // ===== PROGRESS TRACKER =====
+        function updateProgress() {
+            const count = state.completed.filter(Boolean).length;
+            document.getElementById('completedCount').textContent = count;
+
+            state.completed.forEach((done, i) => {
+                const dot = document.querySelector(`.progress-dot[data-exercise="${i + 1}"]`);
+                if (done) {
+                    dot.classList.remove('active');
+                    dot.classList.add('completed');
+                    dot.innerHTML = '&#10003;';
+                }
+                if (i > 0) {
+                    const conn = document.getElementById('conn' + i);
+                    if (state.completed[i - 1]) {
+                        conn.classList.add('filled');
+                    }
+                }
+            });
+
+            if (count === 6) {
+                showResults();
+            }
+        }
+
+        function markExerciseComplete(num) {
+            if (state.completed[num - 1]) return;
+            state.completed[num - 1] = true;
+            const card = document.getElementById('exercise' + num);
+            card.classList.add('completed-card');
+            card.classList.remove('active-exercise');
+            updateProgress();
+
+            if (num < 6 && !state.completed[num]) {
+                const nextCard = document.getElementById('exercise' + (num + 1));
+                nextCard.classList.add('active-exercise');
+                setTimeout(() => {
+                    nextCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 600);
+            }
+        }
+
+        window.scrollToExercise = function(num) {
+            const el = document.getElementById('exercise' + num);
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        };
+
+        // ===== EXERCISE 1: FILL IN THE BLANK =====
+        const ex1Data = [
+            { before: '"Ik wil iets ', after: '."', options: ['zeggen', 'eten', 'kopen'], correct: 'zeggen' },
+            { before: '"Mag ik een vraag ', after: '?"', options: ['stellen', 'geven', 'maken'], correct: 'stellen' },
+            { before: '"Ik ben het ', after: '."', options: ['eens', 'goed', 'klaar'], correct: 'eens' },
+            { before: '"Kunt u dat ', after: '?"', options: ['herhalen', 'betalen', 'vergeten'], correct: 'herhalen' },
+            { before: '"Ik ben het niet ', after: ' met dit voorstel."', options: ['eens', 'goed', 'blij'], correct: 'eens' }
+        ];
+
+        let ex1Score = 0;
+        let ex1Answered = 0;
+
+        function renderEx1() {
+            const container = document.getElementById('ex1-sentences');
+            ex1Data.forEach((item, i) => {
+                const div = document.createElement('div');
+                div.className = 'sentence-item';
+                div.id = 'sent' + i;
+
+                let optionsHtml = item.options.map(opt =>
+                    `<button class="option-btn" onclick="handleEx1(${i}, '${opt}', this)">${opt}</button>`
+                ).join('');
+
+                div.innerHTML = `
+                    <p class="sentence-text">
+                        ${item.before}<span class="sentence-blank" id="blank${i}">???</span>${item.after}
+                        <span class="feedback-icon" id="fb${i}"></span>
+                    </p>
+                    <div class="sentence-options" id="opts${i}">${optionsHtml}</div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        window.handleEx1 = function(index, answer, btn) {
+            const item = ex1Data[index];
+            const sentItem = document.getElementById('sent' + index);
+            const blank = document.getElementById('blank' + index);
+            const feedback = document.getElementById('fb' + index);
+            const opts = document.getElementById('opts' + index).querySelectorAll('.option-btn');
+
+            opts.forEach(o => o.disabled = true);
+
+            blank.textContent = answer;
+            blank.classList.add('filled');
+
+            if (answer === item.correct) {
+                ex1Score++;
+                btn.classList.add('selected-correct');
+                sentItem.classList.add('correct');
+                feedback.className = 'feedback-icon correct-icon show';
+                feedback.innerHTML = '&#10003;';
+            } else {
+                btn.classList.add('selected-wrong');
+                sentItem.classList.add('incorrect');
+                blank.classList.add('wrong');
+                feedback.className = 'feedback-icon wrong-icon show';
+                feedback.innerHTML = '&#10007;';
+                opts.forEach(o => {
+                    if (o.textContent === item.correct) o.classList.add('selected-correct');
+                });
+            }
+
+            ex1Answered++;
+            state.scores[0] = ex1Score;
+            document.getElementById('score1').textContent = `Score: ${ex1Score} / 5`;
+
+            if (ex1Answered === 5) {
+                markExerciseComplete(1);
+            }
+        };
+
+        renderEx1();
+
+        // ===== EXERCISE 2: DRAG & DROP =====
+        const dragPhases = [
+            { id: 'p3', text: 'Vragen en opmerkingen', correct: 3 },
+            { id: 'p1', text: 'Welkom en voorstelrondje', correct: 1 },
+            { id: 'p4', text: 'Afsluiting', correct: 4 },
+            { id: 'p2', text: 'Planning deze week bespreken', correct: 2 }
+        ];
+
+        const matchPhrases = [
+            { phase: 'Welkom en voorstelrondje', correct: 'begin' },
+            { phase: 'Planning deze week bespreken', correct: 'punt2' },
+            { phase: 'Vragen en opmerkingen', correct: 'vragen' },
+            { phase: 'Afsluiting', correct: 'sluiten' }
+        ];
+
+        const phraseOptions = [
+            { value: 'begin', text: '"Laten we beginnen met punt 1."' },
+            { value: 'punt2', text: '"Nu gaan we naar punt 2."' },
+            { value: 'vragen', text: '"Hebben jullie nog vragen?"' },
+            { value: 'sluiten', text: '"Dan sluiten we de vergadering."' }
+        ];
+
+        let dragOrderScore = 0;
+        let matchScore = 0;
+
+        function renderDragArea() {
+            const area = document.getElementById('dragArea');
+            dragPhases.forEach((item, i) => {
+                const div = document.createElement('div');
+                div.className = 'drag-item';
+                div.draggable = true;
+                div.id = item.id;
+                div.dataset.correct = item.correct;
+                div.innerHTML = `
+                    <span class="drag-handle">&#8942;&#8942;</span>
+                    <span class="drag-number">${i + 1}</span>
+                    <span class="drag-text">${item.text}</span>
+                `;
+
+                div.addEventListener('dragstart', handleDragStart);
+                div.addEventListener('dragover', handleDragOver);
+                div.addEventListener('drop', handleDrop);
+                div.addEventListener('dragend', handleDragEnd);
+                div.addEventListener('touchstart', handleTouchStart, { passive: false });
+                div.addEventListener('touchmove', handleTouchMove, { passive: false });
+                div.addEventListener('touchend', handleTouchEnd);
+
+                area.appendChild(div);
+            });
+        }
+
+        let draggedItem = null;
+
+        function handleDragStart(e) {
+            draggedItem = this;
+            this.classList.add('dragging');
+            e.dataTransfer.effectAllowed = 'move';
+        }
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'move';
+            if (this !== draggedItem) {
+                this.classList.add('drag-over');
+            }
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            if (this !== draggedItem) {
+                const area = document.getElementById('dragArea');
+                const items = [...area.children];
+                const fromIndex = items.indexOf(draggedItem);
+                const toIndex = items.indexOf(this);
+
+                if (fromIndex < toIndex) {
+                    area.insertBefore(draggedItem, this.nextSibling);
+                } else {
+                    area.insertBefore(draggedItem, this);
+                }
+                updateDragNumbers();
+            }
+            this.classList.remove('drag-over');
+        }
+
+        function handleDragEnd() {
+            document.querySelectorAll('.drag-item').forEach(item => {
+                item.classList.remove('dragging', 'drag-over');
+            });
+        }
+
+        // Touch support for mobile drag
+        let touchStartY = 0;
+        let touchClone = null;
+
+        function handleTouchStart(e) {
+            draggedItem = this;
+            touchStartY = e.touches[0].clientY;
+            this.classList.add('dragging');
+        }
+
+        function handleTouchMove(e) {
+            e.preventDefault();
+            const touch = e.touches[0];
+            const area = document.getElementById('dragArea');
+            const items = [...area.querySelectorAll('.drag-item:not(.dragging)')];
+
+            items.forEach(item => {
+                const rect = item.getBoundingClientRect();
+                const midY = rect.top + rect.height / 2;
+                item.classList.remove('drag-over');
+                if (touch.clientY > rect.top && touch.clientY < rect.bottom) {
+                    item.classList.add('drag-over');
+                }
+            });
+        }
+
+        function handleTouchEnd(e) {
+            const area = document.getElementById('dragArea');
+            const overItem = area.querySelector('.drag-over');
+            if (overItem && draggedItem !== overItem) {
+                const items = [...area.children];
+                const fromIndex = items.indexOf(draggedItem);
+                const toIndex = items.indexOf(overItem);
+
+                if (fromIndex < toIndex) {
+                    area.insertBefore(draggedItem, overItem.nextSibling);
+                } else {
+                    area.insertBefore(draggedItem, overItem);
+                }
+                updateDragNumbers();
+            }
+            document.querySelectorAll('.drag-item').forEach(item => {
+                item.classList.remove('dragging', 'drag-over');
+            });
+        }
+
+        function updateDragNumbers() {
+            const items = document.getElementById('dragArea').querySelectorAll('.drag-item');
+            items.forEach((item, i) => {
+                item.querySelector('.drag-number').textContent = i + 1;
+            });
+        }
+
+        window.checkDragOrder = function() {
+            const items = document.getElementById('dragArea').querySelectorAll('.drag-item');
+            let allCorrect = true;
+            dragOrderScore = 0;
+
+            items.forEach((item, i) => {
+                const correct = parseInt(item.dataset.correct);
+                if (correct === i + 1) {
+                    item.classList.add('correct-order');
+                    item.classList.remove('wrong-order');
+                    dragOrderScore++;
+                } else {
+                    item.classList.add('wrong-order');
+                    item.classList.remove('correct-order');
+                    allCorrect = false;
+                }
+                item.draggable = false;
+                item.style.cursor = 'default';
+            });
+
+            document.getElementById('checkOrderBtn').disabled = true;
+
+            if (allCorrect) {
+                document.getElementById('phaseMatchArea').style.display = 'block';
+                renderMatchRows();
+                setTimeout(() => {
+                    document.getElementById('phaseMatchArea').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 300);
+            } else {
+                // Show correct order after a delay, then show matching
+                setTimeout(() => {
+                    document.getElementById('phaseMatchArea').style.display = 'block';
+                    renderMatchRows();
+                }, 1500);
+            }
+        };
+
+        function renderMatchRows() {
+            const container = document.getElementById('matchRows');
+            const shuffledOptions = [...phraseOptions].sort(() => Math.random() - 0.5);
+
+            matchPhrases.forEach((item, i) => {
+                const optionsHtml = '<option value="">Choose a phrase...</option>' +
+                    shuffledOptions.map(o => `<option value="${o.value}">${o.text}</option>`).join('');
+
+                const row = document.createElement('div');
+                row.className = 'match-row';
+                row.innerHTML = `
+                    <div class="match-phase">${item.phase}</div>
+                    <span class="match-arrow">&#8594;</span>
+                    <select class="match-select" data-correct="${item.correct}" id="match${i}">
+                        ${optionsHtml}
+                    </select>
+                `;
+                container.appendChild(row);
+            });
+        }
+
+        window.checkMatches = function() {
+            matchScore = 0;
+            const selects = document.querySelectorAll('.match-select');
+            selects.forEach(sel => {
+                if (sel.value === sel.dataset.correct) {
+                    sel.classList.add('correct-match');
+                    matchScore++;
+                } else {
+                    sel.classList.add('wrong-match');
+                }
+                sel.disabled = true;
+            });
+
+            document.getElementById('checkMatchBtn').disabled = true;
+            state.scores[1] = dragOrderScore + matchScore;
+            markExerciseComplete(2);
+        };
+
+        renderDragArea();
+
+        // ===== EXERCISE 3: OPINION MATCHING =====
+        const ex3Data = [
+            {
+                statement: 'De manager zegt: "We beginnen elke dag om 8 uur."',
+                label: 'Wat is jouw reactie?',
+                options: [
+                    { text: 'Ik vind dat een goed idee, want dan zijn we vroeg klaar.', correct: true },
+                    { text: 'Ik vind dat een goed idee, want ik slaap graag lang.', correct: false },
+                    { text: 'Ik vind dat geen goed idee, want ik ben altijd op tijd.', correct: false }
+                ]
+            },
+            {
+                statement: 'De teamleider zegt: "We gaan elke vrijdag een teamlunch doen."',
+                label: 'Wat is jouw reactie?',
+                options: [
+                    { text: 'Ik vind dat geen goed idee, omdat het leuk klinkt.', correct: false },
+                    { text: 'Ik vind dat een goed idee, omdat we dan beter samenwerken.', correct: true },
+                    { text: 'Ik vind dat een goed idee, omdat ik niet van eten houd.', correct: false }
+                ]
+            },
+            {
+                statement: 'Een collega zegt: "Laten we de vergadering overslaan vandaag."',
+                label: 'Wat is jouw reactie?',
+                options: [
+                    { text: 'Ik vind dat geen goed idee, want we hebben veel te bespreken.', correct: true },
+                    { text: 'Ik vind dat een goed idee, want de vergadering is belangrijk.', correct: false },
+                    { text: 'Ik vind dat geen goed idee, want ik houd van vrije tijd.', correct: false }
+                ]
+            }
+        ];
+
+        let ex3Score = 0;
+        let ex3Answered = 0;
+
+        function renderEx3() {
+            const container = document.getElementById('ex3-opinions');
+            ex3Data.forEach((item, i) => {
+                const div = document.createElement('div');
+                div.className = 'opinion-card';
+                div.id = 'opinion' + i;
+
+                const optionsHtml = item.options.map((opt, j) =>
+                    `<button class="opinion-option" onclick="handleEx3(${i}, ${j}, this)">${opt.text}</button>`
+                ).join('');
+
+                div.innerHTML = `
+                    <p class="opinion-statement">${item.statement}</p>
+                    <p class="opinion-label">${item.label}</p>
+                    <div class="opinion-options">${optionsHtml}</div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        window.handleEx3 = function(qIndex, optIndex, btn) {
+            const card = document.getElementById('opinion' + qIndex);
+            const item = ex3Data[qIndex];
+            const btns = card.querySelectorAll('.opinion-option');
+
+            card.classList.add('answered');
+            btns.forEach(b => b.disabled = true);
+
+            if (item.options[optIndex].correct) {
+                ex3Score++;
+                btn.classList.add('selected-correct');
+                card.classList.add('correct');
+            } else {
+                btn.classList.add('selected-wrong');
+                card.classList.add('incorrect');
+                btns.forEach((b, j) => {
+                    if (item.options[j].correct) b.classList.add('show-correct');
+                });
+            }
+
+            ex3Answered++;
+            state.scores[2] = ex3Score;
+            document.getElementById('score3').textContent = `Score: ${ex3Score} / 3`;
+
+            if (ex3Answered === 3) {
+                markExerciseComplete(3);
+            }
+        };
+
+        renderEx3();
+
+        // ===== EXERCISE 4: SENTENCE BUILDER =====
+        let sentencesBuiltCount = 0;
+
+        window.selectBlock = function(btn) {
+            const row = btn.dataset.row;
+            const value = btn.dataset.value;
+
+            // Deselect others in same row
+            document.querySelectorAll(`.builder-block[data-row="${row}"]`).forEach(b => {
+                b.classList.remove('selected');
+            });
+
+            btn.classList.add('selected');
+            state.builderSelections[row] = value;
+
+            updateBuilderPreview();
+        };
+
+        function updateBuilderPreview() {
+            const s = state.builderSelections;
+            const text = document.getElementById('builderText');
+            const placeholder = document.getElementById('builderPlaceholder');
+            const preview = document.getElementById('builderPreview');
+            const celebration = document.getElementById('builderCelebration');
+
+            if (s[1] || s[2] || s[3]) {
+                placeholder.style.display = 'none';
+                let sentence = '';
+                if (s[1]) sentence += s[1];
+                if (s[2]) sentence += ' ' + s[2] + '.';
+                if (s[3]) sentence += ' ' + s[3];
+
+                text.textContent = sentence;
+                text.classList.add('visible');
+            } else {
+                placeholder.style.display = 'block';
+                text.classList.remove('visible');
+                text.textContent = '';
+            }
+
+            if (s[1] && s[2] && s[3]) {
+                preview.classList.add('complete');
+                celebration.classList.add('show');
+
+                const key = s[1] + '|' + s[2] + '|' + s[3];
+                if (!state.sentencesBuilt.has(key)) {
+                    state.sentencesBuilt.add(key);
+                    sentencesBuiltCount++;
+                    document.getElementById('sentencesBuilt').textContent = sentencesBuiltCount;
+
+                    state.scores[3] = Math.min(sentencesBuiltCount, 3);
+
+                    if (sentencesBuiltCount >= 3) {
+                        markExerciseComplete(4);
+                    }
+                }
+            } else {
+                preview.classList.remove('complete');
+                celebration.classList.remove('show');
+            }
+        }
+
+        window.resetBuilder = function() {
+            state.builderSelections = { 1: null, 2: null, 3: null };
+            document.querySelectorAll('.builder-block').forEach(b => b.classList.remove('selected'));
+            document.getElementById('builderText').textContent = '';
+            document.getElementById('builderText').classList.remove('visible');
+            document.getElementById('builderPlaceholder').style.display = 'block';
+            document.getElementById('builderPreview').classList.remove('complete');
+            document.getElementById('builderCelebration').classList.remove('show');
+        };
+
+        // ===== EXERCISE 5: QUICK FIRE =====
+        const qfData = [
+            { q: 'Ben je klaar met de presentatie?', options: ['Ja, bijna.', 'Nee, nog niet.'], correct: 0 },
+            { q: 'Heb je het rapport gelezen?', options: ['Ja, dat heb ik.', 'Nee, nog niet.'], correct: 0 },
+            { q: 'Kun je dat morgen sturen?', options: ['Ja, dat kan.', 'Nee, dat lukt niet.'], correct: 0 },
+            { q: 'Heb je de mail naar de klant gestuurd?', options: ['Ja, gisteren al.', 'Nee, ik ben het vergeten.'], correct: 0 },
+            { q: 'Is de vergadering om 10 uur?', options: ['Ja, dat klopt.', 'Nee, om 11 uur.'], correct: 0 },
+            { q: 'Werk je vandaag thuis?', options: ['Ja, vandaag wel.', 'Nee, ik ben op kantoor.'], correct: 0 }
+        ];
+
+        let qfCurrent = 0;
+        let qfScore = 0;
+        let qfTimer = 0;
+        let qfTimerInterval = null;
+        let qfStarted = false;
+
+        window.startQuickfire = function() {
+            if (qfStarted) return;
+            qfStarted = true;
+            qfCurrent = 0;
+            qfScore = 0;
+            qfTimer = 0;
+
+            qfTimerInterval = setInterval(() => {
+                qfTimer++;
+                const timerEl = document.getElementById('qfTimerDisplay');
+                if (timerEl) {
+                    timerEl.textContent = qfTimer + 's';
+                    if (qfTimer > 20) timerEl.parentElement.classList.add('warning');
+                }
+            }, 1000);
+
+            renderQfQuestion();
+        };
+
+        function renderQfQuestion() {
+            const area = document.getElementById('quickfireArea');
+
+            if (qfCurrent >= qfData.length) {
+                clearInterval(qfTimerInterval);
+                state.scores[4] = qfScore;
+                area.innerHTML = `
+                    <div class="quickfire-question">
+                        <p class="quickfire-q-text">Done!</p>
+                        <p class="quickfire-q-number">${qfScore} of ${qfData.length} correct in ${qfTimer} seconds</p>
+                    </div>
+                `;
+                markExerciseComplete(5);
+                return;
+            }
+
+            const item = qfData[qfCurrent];
+            const optionsHtml = item.options.map((opt, i) =>
+                `<button class="quickfire-btn" onclick="handleQf(${i})">${opt}</button>`
+            ).join('');
+
+            area.innerHTML = `
+                <div class="quickfire-timer"><span>&#9201;</span> <span id="qfTimerDisplay">${qfTimer}s</span></div>
+                <div class="quickfire-question">
+                    <p class="quickfire-q-number">Question ${qfCurrent + 1} of ${qfData.length}</p>
+                    <p class="quickfire-q-text">${item.q}</p>
+                </div>
+                <div class="quickfire-options">${optionsHtml}</div>
+                <p class="quickfire-result">Score: ${qfScore} / ${qfData.length}</p>
+            `;
+        }
+
+        window.handleQf = function(optIndex) {
+            const item = qfData[qfCurrent];
+            const btns = document.querySelectorAll('.quickfire-btn');
+            btns.forEach(b => b.disabled = true);
+
+            if (optIndex === item.correct) {
+                qfScore++;
+                btns[optIndex].classList.add('qf-correct');
+            } else {
+                btns[optIndex].classList.add('qf-wrong');
+                btns[item.correct].classList.add('qf-correct');
+            }
+
+            qfCurrent++;
+            setTimeout(renderQfQuestion, 800);
+        };
+
+        // ===== EXERCISE 6: DIALOGUE =====
+        const dialogueData = [
+            { speaker: 'chair', name: 'Voorzitter', before: '"Goedemorgen, ', after: '."', options: ['welkom', 'doei', 'sorry'], correct: 'welkom' },
+            { speaker: 'chair', name: 'Voorzitter', before: '"Laten we ', after: '."', options: ['beginnen', 'stoppen', 'eten'], correct: 'beginnen' },
+            { speaker: 'chair', name: 'Voorzitter', before: '"We praten vandaag over het ', after: '."', options: ['werkrooster', 'weer', 'eten'], correct: 'werkrooster' },
+            { speaker: 'participant', name: 'Deelnemer', before: '"Ik vind dat een ', after: ' idee."', options: ['goed', 'slecht', 'raar'], correct: 'goed' },
+            { speaker: 'chair', name: 'Voorzitter', before: '"Bedankt, tot de ', after: ' vergadering."', options: ['volgende', 'laatste', 'eerste'], correct: 'volgende' }
+        ];
+
+        function renderDialogue() {
+            const area = document.getElementById('dialogueArea');
+
+            dialogueData.forEach((item, i) => {
+                const speakerClass = item.speaker === 'chair' ? 'speaker-chair' : 'speaker-participant';
+                const speakerInitial = item.speaker === 'chair' ? 'V' : 'D';
+
+                const optionsHtml = '<option value="">...</option>' +
+                    item.options.map(o => `<option value="${o}">${o}</option>`).join('');
+
+                const line = document.createElement('div');
+                line.className = 'dialogue-line';
+                line.innerHTML = `
+                    <div class="dialogue-speaker ${speakerClass}">${speakerInitial}</div>
+                    <div class="dialogue-bubble" id="bubble${i}">
+                        <div class="dialogue-speaker-name">${item.name}</div>
+                        <div class="dialogue-text">
+                            ${item.before}<select class="dialogue-blank-select" data-correct="${item.correct}" id="dsel${i}">${optionsHtml}</select>${item.after}
+                        </div>
+                    </div>
+                `;
+                area.appendChild(line);
+            });
+        }
+
+        window.checkDialogue = function() {
+            let dScore = 0;
+            const selects = document.querySelectorAll('.dialogue-blank-select');
+
+            selects.forEach((sel, i) => {
+                const bubble = document.getElementById('bubble' + i);
+                if (sel.value === sel.dataset.correct) {
+                    sel.classList.add('correct-fill');
+                    bubble.classList.add('correct');
+                    dScore++;
+                } else {
+                    sel.classList.add('wrong-fill');
+                    bubble.classList.add('incorrect');
+                    // Show correct answer
+                    sel.value = sel.dataset.correct;
+                    setTimeout(() => {
+                        sel.classList.remove('wrong-fill');
+                        sel.classList.add('correct-fill');
+                    }, 1500);
+                }
+                sel.disabled = true;
+            });
+
+            document.getElementById('checkDialogueBtn').disabled = true;
+            state.scores[5] = dScore;
+            markExerciseComplete(6);
+        };
+
+        renderDialogue();
+
+        // ===== RESULTS =====
+        function showResults() {
+            const totalScore = state.scores.reduce((a, b) => a + b, 0);
+            const totalMax = state.maxScores.reduce((a, b) => a + b, 0);
+            const percentage = Math.round((totalScore / totalMax) * 100);
+
+            const section = document.getElementById('resultsSection');
+            section.classList.add('visible');
+
+            document.getElementById('resultsScore').textContent = percentage + '%';
+
+            if (percentage >= 90) {
+                document.getElementById('resultsEmoji').textContent = '\uD83C\uDF1F';
+                document.getElementById('resultsTitle').textContent = 'Amazing!';
+                document.getElementById('resultsMessage').textContent = 'You got almost everything right. Your meeting Dutch is already very strong. With a few more lessons you\'ll be fully prepared for any meeting.';
+            } else if (percentage >= 70) {
+                document.getElementById('resultsEmoji').textContent = '\uD83D\uDCAA';
+                document.getElementById('resultsTitle').textContent = 'Well done!';
+                document.getElementById('resultsMessage').textContent = 'You already know a lot. With a bit more practice you\'ll get even better. Want to progress faster? Book a free introduction with Joke.';
+            } else {
+                document.getElementById('resultsEmoji').textContent = '\uD83C\uDF31';
+                document.getElementById('resultsTitle').textContent = 'Keep practising!';
+                document.getElementById('resultsMessage').textContent = 'You\'re on the right track. Meeting Dutch is tricky, but with the right guidance you\'ll learn it quickly. Joke is happy to help!';
+            }
+
+            setTimeout(() => {
+                section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                launchConfetti();
+            }, 400);
+        }
+
+        // ===== CONFETTI =====
+        function launchConfetti() {
+            const container = document.getElementById('confettiContainer');
+            const colors = ['#5B7B6D', '#8DB5A4', '#D4B282', '#B8924A', '#F2F7F5', '#4A6559'];
+
+            for (let i = 0; i < 80; i++) {
+                const piece = document.createElement('div');
+                piece.className = 'confetti-piece';
+                piece.style.left = Math.random() * 100 + '%';
+                piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+                piece.style.animationDelay = Math.random() * 2 + 's';
+                piece.style.animationDuration = (2 + Math.random() * 2) + 's';
+                piece.style.width = (6 + Math.random() * 8) + 'px';
+                piece.style.height = (6 + Math.random() * 8) + 'px';
+                piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+                container.appendChild(piece);
+            }
+
+            setTimeout(() => {
+                container.innerHTML = '';
+            }, 5000);
+        }
+
+    })();
+    </script>
+</body>
+</html>
