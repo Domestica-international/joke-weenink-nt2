@@ -383,6 +383,67 @@
             color: #4A6559;
         }
 
+        /* ========== EXERCISE BANNER ========== */
+        .exercise-banner {
+            padding: 56px 0;
+            background: #fff;
+            border-top: 1px solid rgba(0,0,0,0.04);
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+        }
+        .exercise-banner-inner {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+        }
+        .exercise-banner-icon {
+            width: 88px;
+            height: 88px;
+            background: linear-gradient(135deg, #F2F7F5, #FFF8F0);
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.6rem;
+            box-shadow: 0 10px 30px rgba(91,123,109,0.1);
+            flex-shrink: 0;
+        }
+        .exercise-banner-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 6px;
+        }
+        .exercise-banner-text p {
+            color: #6B6B6B;
+            font-size: 0.92rem;
+            margin-bottom: 16px;
+            max-width: 460px;
+        }
+        .btn-exercise {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: #5B7B6D;
+            color: #fff;
+            border-radius: 50px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-exercise:hover {
+            background: #4A6559;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(91,123,109,0.3);
+        }
+        .btn-exercise .arrow { transition: transform 0.3s; }
+        .btn-exercise:hover .arrow { transform: translateX(4px); }
+        @media (max-width: 700px) {
+            .exercise-banner-inner { flex-direction: column; text-align: center; }
+            .exercise-banner-text p { margin: 0 auto 16px; }
+        }
+
         /* ========== CTA SECTION ========== */
         .cta-section {
             padding: 100px 0;
@@ -878,6 +939,22 @@
                     <span class="article-link">Lees meer →</span>
                 </a>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EXERCISE BANNER ========== -->
+    <section class="exercise-banner">
+        <div class="container">
+            <div class="exercise-banner-inner">
+                <div class="exercise-banner-icon">🎮</div>
+                <div class="exercise-banner-text">
+                    <h3>Liever oefenen dan lezen?</h3>
+                    <p>Test je Nederlands met 6 interactieve oefeningen. Oefen vergaderzinnen, bouw zinnen en zie direct je score!</p>
+                    <a href="oefeningen.html" class="btn-exercise">
+                        Start de oefeningen <span class="arrow">→</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
