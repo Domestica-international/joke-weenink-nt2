@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikelen & Tips — Joke Weenink NT2 | Nederlands Leren</title>
+    <meta name="description" content="Handige artikelen en tips over Nederlands leren, NT2, inburgering en meer. Van Joke Weenink, ervaren NT2 docent.">
+    <meta name="keywords" content="NT2 artikelen, Nederlands leren tips, inburgering gids, NT2 lessen, Nederlandse taalcursus, Dutch lessons">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Artikelen & Tips — Joke Weenink NT2">
+    <meta property="og:description" content="Handige artikelen en tips over Nederlands leren, NT2, inburgering en meer.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_NL">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* ========== RESET & BASE ========== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: #3D3D3D;
+            background: #FAFAF7;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #2B2B2B;
+            line-height: 1.25;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: #5B7B6D;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #3D5A4C;
+        }
+
+        /* ========== UTILITY ========== */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: #5B7B6D;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #4A6559;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(91, 123, 109, 0.3);
+        }
+
+        /* ========== NAV ========== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(250, 250, 247, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            transition: box-shadow 0.3s;
+        }
+
+        .nav.scrolled {
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #2B2B2B;
+        }
+
+        .nav-logo span {
+            color: #5B7B6D;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #555;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #5B7B6D;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: #2B2B2B;
+        }
+
+        .nav-links a.active-link {
+            color: #5B7B6D;
+            font-weight: 600;
+        }
+
+        .nav-links a.active-link::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            padding: 10px 24px;
+            background: #5B7B6D;
+            color: #fff !important;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .nav-cta:hover {
+            background: #4A6559;
+            color: #fff !important;
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        /* Mobile menu */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #2B2B2B;
+            margin: 6px 0;
+            transition: all 0.3s;
+            border-radius: 2px;
+        }
+
+        /* ========== PAGE HERO ========== */
+        .page-hero {
+            padding: 160px 0 80px;
+            background: linear-gradient(165deg, #F2F7F5 0%, #FAFAF7 40%, #FFF8F0 100%);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(91,123,109,0.06) 0%, transparent 70%);
+        }
+
+        .page-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212,178,130,0.08) 0%, transparent 70%);
+        }
+
+        .page-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(91,123,109,0.1);
+            color: #5B7B6D;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .page-hero h1 em {
+            color: #5B7B6D;
+            font-style: italic;
+        }
+
+        .page-hero-sub {
+            font-size: 1.15rem;
+            color: #6B6B6B;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ========== ARTICLES GRID ========== */
+        .articles-section {
+            padding: 80px 0 100px;
+            background: #FAFAF7;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .article-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px 28px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(91,123,109,0.1);
+            border-color: rgba(91,123,109,0.15);
+            color: inherit;
+        }
+
+        .article-tag {
+            display: inline-block;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 50px;
+            margin-bottom: 18px;
+            width: fit-content;
+        }
+
+        .tag-nt2 {
+            background: rgba(91,123,109,0.1);
+            color: #5B7B6D;
+        }
+
+        .tag-gids {
+            background: rgba(212,178,130,0.15);
+            color: #9A7B4F;
+        }
+
+        .tag-inburgering {
+            background: rgba(108,92,153,0.1);
+            color: #6C5C99;
+        }
+
+        .tag-vergelijking {
+            background: rgba(67,139,160,0.1);
+            color: #438BA0;
+        }
+
+        .tag-expats {
+            background: rgba(194,114,85,0.1);
+            color: #C27255;
+        }
+
+        .tag-english {
+            background: rgba(58,95,130,0.1);
+            color: #3A5F82;
+        }
+
+        .article-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            line-height: 1.35;
+            color: #2B2B2B;
+        }
+
+        .article-card p {
+            font-size: 0.92rem;
+            color: #6B6B6B;
+            line-height: 1.7;
+            flex-grow: 1;
+            margin-bottom: 20px;
+        }
+
+        .article-link {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #5B7B6D;
+            transition: color 0.3s;
+        }
+
+        .article-card:hover .article-link {
+            color: #4A6559;
+        }
+
+        /* ========== CTA SECTION ========== */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(165deg, #F2F7F5 0%, #FAFAF7 50%, #FFF8F0 100%);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.4rem;
+            margin-bottom: 16px;
+        }
+
+        .cta-section h2 em {
+            color: #5B7B6D;
+            font-style: italic;
+        }
+
+        .cta-sub {
+            font-size: 1.1rem;
+            color: #6B6B6B;
+            max-width: 550px;
+            margin: 0 auto 36px;
+            line-height: 1.8;
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: #2B2B2B;
+            color: rgba(255,255,255,0.6);
+            padding: 60px 0 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand span {
+            color: #8DB5A4;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            max-width: 320px;
+        }
+
+        .footer h4 {
+            color: #fff;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.88rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #8DB5A4;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 968px) {
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+
+            .page-hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: rgba(250,250,247,0.98);
+                backdrop-filter: blur(12px);
+                padding: 24px;
+                gap: 20px;
+                border-bottom: 1px solid rgba(0,0,0,0.06);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .page-hero {
+                padding: 130px 0 60px;
+            }
+
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .cta-section {
+                padding: 70px 0;
+            }
+
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== NAV ========== -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">Joke <span>Weenink</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="over-mij.html">Over mij</a></li>
+                <li><a href="index.html#lessen">Lessen</a></li>
+                <li><a href="index.html#prijzen">Prijzen</a></li>
+                <li><a href="artikelen.html" class="active-link">Artikelen</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="mailto:weeninkjoke@hotmail.com" class="nav-cta">Gratis kennismaking</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu openen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-badge">
+                <span>📚</span> Lezen, leren, groeien
+            </div>
+            <h1>Artikelen & <em>Tips</em></h1>
+            <p class="page-hero-sub">
+                Alles wat je wilt weten over Nederlands leren, NT2 en inburgering. Handige gidsen, vergelijkingen en praktische tips van een ervaren NT2 docent.
+            </p>
+        </div>
+    </section>
+
+    <!-- ========== ARTICLES GRID ========== -->
+    <section class="articles-section">
+        <div class="container">
+            <div class="articles-grid">
+
+                <!-- Article 1 -->
+                <a href="nt2-docent.html" class="article-card">
+                    <span class="article-tag tag-nt2">NT2</span>
+                    <h3>Wat doet een NT2 docent?</h3>
+                    <p>Wat maakt een goede NT2 docent? Ontdek waar je op moet letten en waarom persoonlijke aandacht het verschil maakt.</p>
+                    <span class="article-link">Lees meer →</span>
+                </a>
+
+                <!-- Article 2 -->
+                <a href="nederlands-leren.html" class="article-card">
+                    <span class="article-tag tag-gids">Gids</span>
+                    <h3>Nederlands leren: de complete gids</h3>
+                    <p>Van A1 tot B2: alles wat je moet weten over Nederlands leren als beginner. Inclusief tips en tijdlijn.</p>
+                    <span class="article-link">Lees meer →</span>
+                </a>
+
+                <!-- Article 3 -->
+                <a href="nt2-lessen.html" class="article-card">
+                    <span class="article-tag tag-nt2">NT2</span>
+                    <h3>NT2 lessen: alles wat je moet weten</h3>
+                    <p>Welke soorten NT2 lessen zijn er? En welke past het beste bij jouw situatie en doel?</p>
+                    <span class="article-link">Lees meer →</span>
+                </a>
+
+                <!-- Article 4 -->
+                <a href="inburgering.html" class="article-card">
+                    <span class="article-tag tag-inburgering">Inburgering</span>
+                    <h3>Inburgering in Nederland</h3>
+                    <p>Alles over het inburgeringsexamen: onderdelen, voorbereiding en hoe je in 40 weken slaagt.</p>
+                    <span class="article-link">Lees meer →</span>
+                </a>
+
+                <!-- Article 5 -->
+                <a href="nederlandse-taalcursus.html" class="article-card">
+                    <span class="article-tag tag-vergelijking">Vergelijking</span>
+                    <h3>De beste Nederlandse taalcursus kiezen</h3>
+                    <p>Taalschool, privédocent of app? Vergelijk je opties en maak de juiste keuze.</p>
+                    <span class="article-link">Lees meer →</span>
+                </a>
+
+                <!-- Article 6 -->
+                <a href="expats-nederland.html" class="article-card">
+                    <span class="article-tag tag-expats">Expats</span>
+                    <h3>Nederlands leren als expat</h3>
+                    <p>Waarom Nederlands leren je leven als expat verandert. Van carrière tot sociale contacten.</p>
+                    <span class="article-link">Lees meer →</span>
+                </a>
+
+                <!-- Article 7 -->
+                <a href="nederlands-als-tweede-taal.html" class="article-card">
+                    <span class="article-tag tag-nt2">NT2</span>
+                    <h3>Nederlands als tweede taal (NT2)</h3>
+                    <p>Wat betekent NT2? Uitleg over niveaus, het systeem en hoe het werkt in Nederland.</p>
+                    <span class="article-link">Lees meer →</span>
+                </a>
+
+                <!-- Article 8 -->
+                <a href="dutch-lessons.html" class="article-card">
+                    <span class="article-tag tag-english">English</span>
+                    <h3>Dutch Lessons: Your Complete Guide</h3>
+                    <p>Everything you need to know about taking Dutch lessons in the Netherlands. In English.</p>
+                    <span class="article-link">Lees meer →</span>
+                </a>
+
+                <!-- Article 9 -->
+                <a href="nt2-cursus.html" class="article-card">
+                    <span class="article-tag tag-vergelijking">Vergelijking</span>
+                    <h3>NT2 cursus vergelijken</h3>
+                    <p>Privé, groep of online? Ontdek welke NT2 cursus het beste bij je past.</p>
+                    <span class="article-link">Lees meer →</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA SECTION ========== -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Klaar om te <em>beginnen?</em></h2>
+            <p class="cta-sub">
+                Heb je vragen over Nederlands leren of wil je weten welke les bij jou past? Plan een gratis kennismakingsgesprek. Vrijblijvend en gezellig.
+            </p>
+            <a href="mailto:weeninkjoke@hotmail.com" class="btn btn-primary">Gratis kennismaking</a>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">Joke <span>Weenink</span></div>
+                    <p class="footer-desc">
+                        NT2 docent uit passie. Ik help je Nederlands leren op een manier die bij je past. Met geduld, humor en een goed lesplan.
+                    </p>
+                </div>
+                <div>
+                    <h4>Pagina's</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="over-mij.html">Over Joke</a></li>
+                        <li><a href="artikelen.html">Artikelen</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:weeninkjoke@hotmail.com">weeninkjoke@hotmail.com</a></li>
+                        <li><a href="mailto:weeninkjoke@hotmail.com">Gratis kennismaking</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Joke Weenink NT2. Alle rechten voorbehouden.</span>
+                <span>Met ❤️ gemaakt voor iedereen die Nederlands wil leren</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        // Mobile nav toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile nav on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll shadow
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>
