@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nederlands als tweede taal (NT2): wat is het en hoe werkt het? | Joke Weenink</title>
+    <meta name="description" content="Wat is NT2? Leer alles over Nederlands als tweede taal: de ERK-niveaus (A1 t/m B2), het verschil met NT1, inburgering en hoe NT2-onderwijs werkt in Nederland.">
+    <meta name="keywords" content="Nederlands als tweede taal, NT2, ERK niveaus, CEFR, inburgering, NT2 onderwijs, A1 A2 B1 B2, Nederlands leren">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Nederlands als tweede taal (NT2): wat is het en hoe werkt het?">
+    <meta property="og:description" content="Alles over NT2: de ERK-niveaus, het verschil met NT1, wie NT2 volgt en hoe het onderwijs werkt in Nederland.">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="nl_NL">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Nederlands als tweede taal (NT2): wat is het en hoe werkt het?",
+        "description": "Alles over NT2: de ERK-niveaus, het verschil met NT1, wie NT2 volgt en hoe het onderwijs werkt in Nederland.",
+        "author": {
+            "@type": "Person",
+            "name": "Joke Weenink",
+            "jobTitle": "NT2 Docent"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Joke Weenink NT2"
+        },
+        "datePublished": "2026-03-24",
+        "dateModified": "2026-03-24",
+        "mainEntityOfPage": {
+            "@type": "WebPage"
+        },
+        "keywords": ["Nederlands als tweede taal", "NT2", "ERK niveaus", "inburgering", "Nederlands leren"]
+    }
+    </script>
+
+    <style>
+        /* ========== RESET & BASE ========== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: #3D3D3D;
+            background: #FAFAF7;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #2B2B2B;
+            line-height: 1.25;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: #5B7B6D;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #3D5A4C;
+        }
+
+        /* ========== UTILITY ========== */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: #5B7B6D;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #4A6559;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(91, 123, 109, 0.3);
+        }
+
+        /* ========== NAV ========== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(250, 250, 247, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            transition: box-shadow 0.3s;
+        }
+
+        .nav.scrolled {
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #2B2B2B;
+        }
+
+        .nav-logo span {
+            color: #5B7B6D;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #555;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #5B7B6D;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: #2B2B2B;
+        }
+
+        .nav-cta {
+            padding: 10px 24px;
+            background: #5B7B6D;
+            color: #fff !important;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .nav-cta:hover {
+            background: #4A6559;
+            color: #fff !important;
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #2B2B2B;
+            margin: 6px 0;
+            transition: all 0.3s;
+            border-radius: 2px;
+        }
+
+        /* ========== ARTICLE HERO ========== */
+        .article-hero {
+            padding: 140px 0 60px;
+            background: linear-gradient(165deg, #F2F7F5 0%, #FAFAF7 40%, #FFF8F0 100%);
+            text-align: center;
+        }
+
+        .article-hero .section-label {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #5B7B6D;
+            margin-bottom: 16px;
+        }
+
+        .article-hero h1 {
+            font-size: 2.8rem;
+            max-width: 760px;
+            margin: 0 auto 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .article-hero .article-meta {
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .article-hero .article-meta a {
+            font-weight: 600;
+        }
+
+        /* ========== ARTICLE CONTENT ========== */
+        .article-content {
+            padding: 60px 0 80px;
+        }
+
+        .article-body {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .article-body p {
+            margin-bottom: 20px;
+            color: #555;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .article-body h2 {
+            font-size: 1.9rem;
+            margin: 48px 0 20px;
+        }
+
+        .article-body h3 {
+            font-size: 1.35rem;
+            margin: 32px 0 14px;
+        }
+
+        .article-body ul, .article-body ol {
+            margin: 0 0 24px 24px;
+            color: #555;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .article-body li {
+            margin-bottom: 8px;
+        }
+
+        .article-body .internal-link {
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        .article-body blockquote {
+            border-left: 4px solid #5B7B6D;
+            padding: 20px 24px;
+            margin: 32px 0;
+            background: #fff;
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        /* Level cards */
+        .level-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 32px 0;
+        }
+
+        .level-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .level-card h4 {
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            color: #5B7B6D;
+        }
+
+        .level-card p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Info box */
+        .info-box {
+            background: rgba(91,123,109,0.08);
+            border-radius: 16px;
+            padding: 28px 32px;
+            margin: 32px 0;
+        }
+
+        .info-box h4 {
+            color: #5B7B6D;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .info-box p {
+            margin-bottom: 0;
+        }
+
+        /* ========== CTA SECTION ========== */
+        .cta-section {
+            background: #5B7B6D;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.05) 0%, transparent 50%);
+        }
+
+        .cta-section h2 {
+            color: #fff;
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.85);
+            font-size: 1.1rem;
+            max-width: 560px;
+            margin: 0 auto 40px;
+            position: relative;
+        }
+
+        .cta-section .btn {
+            background: #fff;
+            color: #5B7B6D;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .cta-section .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+        }
+
+        /* ========== RELATED ARTICLES ========== */
+        .related-articles {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .related-articles h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .related-card {
+            background: #FAFAF7;
+            border-radius: 16px;
+            padding: 28px 24px;
+            border: 1px solid rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+        }
+
+        .related-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+        }
+
+        .related-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .related-card p {
+            font-size: 0.9rem;
+            color: #6B6B6B;
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+
+        .related-card a {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: #2B2B2B;
+            color: rgba(255,255,255,0.6);
+            padding: 60px 0 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand span {
+            color: #8DB5A4;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            max-width: 320px;
+        }
+
+        .footer h4 {
+            color: #fff;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.88rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #8DB5A4;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 968px) {
+            .article-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .level-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: rgba(250,250,247,0.98);
+                backdrop-filter: blur(12px);
+                padding: 24px;
+                gap: 20px;
+                border-bottom: 1px solid rgba(0,0,0,0.06);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .article-hero {
+                padding: 120px 0 50px;
+            }
+
+            .article-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .article-content {
+                padding: 40px 0 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">Joke <span>Weenink</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="over-mij.html">Over mij</a></li>
+                <li><a href="index.html#lessen">Lessen</a></li>
+                <li><a href="index.html#prijzen">Prijzen</a></li>
+                <li><a href="index.html#reviews">Reviews</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="mailto:weeninkjoke@hotmail.com" class="nav-cta">Gratis kennismaking</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu openen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== ARTICLE HERO ========== -->
+    <section class="article-hero">
+        <div class="container">
+            <p class="section-label">NT2 Uitleg</p>
+            <h1>Nederlands als tweede taal (NT2): wat is het en hoe werkt het?</h1>
+            <p class="article-meta">Door <a href="over-mij.html">Joke Weenink</a> &middot; NT2 docent &middot; 21+ jaar ervaring</p>
+        </div>
+    </section>
+
+    <!-- ========== ARTICLE CONTENT ========== -->
+    <section class="article-content">
+        <div class="container">
+            <div class="article-body">
+
+                <p>Je bent in Nederland komen wonen. Nu wil je de taal leren. Maar waar begin je? In dit artikel leg ik uit wat Nederlands als tweede taal (NT2) precies is. Je leert welke niveaus er zijn, wat het verschil is met NT1 en hoe het onderwijs werkt.</p>
+
+                <p>Ik ben <a href="over-mij.html" class="internal-link">Joke Weenink</a>, NT2 docent met meer dan 21 jaar ervaring. In die tijd heb ik meer dan 1.000 cursisten geholpen. Van beginners tot gevorderden. Van expats tot nieuwkomers die moesten inburgeren.</p>
+
+                <h2>Wat is NT2?</h2>
+
+                <p>NT2 staat voor Nederlands als Tweede Taal. Het betekent dat je Nederlands leert terwijl het niet je moedertaal is. Je bent opgegroeid met een andere taal. Nu leer je Nederlands erbij.</p>
+
+                <p>Het verschil met NT1 is simpel. NT1 betekent Nederlands als Eerste Taal. Dat zijn mensen die opgroeiden met Nederlands als moedertaal. Zij leerden de taal als kind, thuis en op school.</p>
+
+                <p>Bij NT2 leer je Nederlands op een andere manier. Je hebt al een taal. Nu voeg je daar Nederlands aan toe. Dat vraagt om een andere aanpak. Een goede <a href="nt2-docent.html" class="internal-link">NT2 docent</a> weet precies hoe dat werkt.</p>
+
+                <h2>De ERK/CEFR-niveaus uitgelegd</h2>
+
+                <p>In Europa gebruiken we het ERK (Europees Referentiekader voor Talen). In het Engels heet dit CEFR. Het deelt taalvaardigheid op in niveaus. Voor NT2 zijn er vier belangrijke niveaus.</p>
+
+                <div class="level-grid">
+                    <div class="level-card">
+                        <h4>A1 - Starter</h4>
+                        <p>Je kunt jezelf voorstellen en eenvoudige vragen beantwoorden. Je begrijpt korte zinnen over bekende onderwerpen. Denk aan boodschappen doen of de weg vragen.</p>
+                    </div>
+                    <div class="level-card">
+                        <h4>A2 - Basisgebruiker</h4>
+                        <p>Je redt je in dagelijkse situaties. Je kunt een gesprek voeren bij de huisarts, op school of op het werk. Dit is het niveau voor het inburgeringsexamen.</p>
+                    </div>
+                    <div class="level-card">
+                        <h4>B1 - Onafhankelijk</h4>
+                        <p>Je kunt meedoen aan gesprekken over werk, studie en vrije tijd. Je begrijpt de hoofdpunten van duidelijke teksten. Je schrijft samenhangende stukken.</p>
+                    </div>
+                    <div class="level-card">
+                        <h4>B2 - Zelfstandig</h4>
+                        <p>Je communiceert vloeiend met moedertaalsprekers. Je begrijpt complexe teksten en kunt je mening geven over uiteenlopende onderwerpen. Dit niveau is nodig voor het staatsexamen NT2.</p>
+                    </div>
+                </div>
+
+                <p>Elk niveau bouwt voort op het vorige. Je begint bij A1 en werkt stap voor stap omhoog. De snelheid hangt af van je achtergrond, motivatie en hoeveel je oefent.</p>
+
+                <h2>Hoeveel tijd kost elk niveau?</h2>
+
+                <div class="info-box">
+                    <h4>Gemiddelde studietijd</h4>
+                    <p>A1 niveau bereik je in ongeveer 80 lesuren. Voor A2 heb je zo'n 120 lesuren nodig. Met <a href="nt2-lessen.html" class="internal-link">privé NT2 lessen</a> gaat het vaak sneller. In een groep oefen je meer met andere cursisten. Beide hebben hun voordelen.</p>
+                </div>
+
+                <p>Deze uren zijn een richtlijn. Sommige cursisten leren sneller. Anderen hebben meer tijd nodig. Dat is helemaal normaal. Wat telt is dat je blijft oefenen.</p>
+
+                <h2>Wie volgt NT2-onderwijs?</h2>
+
+                <p>NT2 is er voor iedereen die niet met Nederlands is opgegroeid. In de praktijk zijn dat vaak deze groepen:</p>
+
+                <ul>
+                    <li><strong>Nieuwkomers</strong> die moeten inburgeren en het inburgeringsexamen willen halen</li>
+                    <li><strong>Expats</strong> die in Nederland werken en de taal willen spreken (lees meer in <a href="expats-nederland.html" class="internal-link">expats in Nederland</a>)</li>
+                    <li><strong>Partners</strong> van Nederlanders die mee willen doen in het dagelijks leven</li>
+                    <li><strong>Internationale studenten</strong> die na hun studie in Nederland willen blijven</li>
+                    <li><strong>Werknemers</strong> die Nederlands nodig hebben voor hun baan of promotie</li>
+                </ul>
+
+                <p>Elke groep heeft andere doelen. Daarom is persoonlijk onderwijs zo belangrijk. Een goede <a href="nederlandse-taalcursus.html" class="internal-link">Nederlandse taalcursus</a> houdt rekening met jouw situatie.</p>
+
+                <h2>NT2 en inburgering</h2>
+
+                <p>Veel mensen leren Nederlands omdat ze moeten inburgeren. Sinds 2022 geldt de nieuwe Wet inburgering. De gemeente helpt je met een persoonlijk plan. Maar je moet zelf het werk doen.</p>
+
+                <p>Voor het <a href="inburgering.html" class="internal-link">inburgeringsexamen</a> heb je minimaal A2-niveau nodig. Het examen toetst vier vaardigheden: lezen, luisteren, schrijven en spreken. Daarnaast maak je het examen Kennis van de Nederlandse Maatschappij (KNM).</p>
+
+                <p>Met goede NT2-lessen bereid je je gericht voor op elk onderdeel. Je oefent niet alleen de taal. Je leert ook hoe het examen werkt. Zo ga je met vertrouwen naar binnen.</p>
+
+                <h2>Hoe werkt NT2-onderwijs in Nederland?</h2>
+
+                <p>Je hebt verschillende opties om <a href="nederlands-leren.html" class="internal-link">Nederlands te leren</a>. De drie meest voorkomende zijn:</p>
+
+                <h3>1. Privélessen</h3>
+                <p>Je krijgt les van een docent, alleen voor jou. Het programma is helemaal op maat. Dit is de snelste manier om vooruit te gaan. Ideaal als je specifieke doelen hebt of snel resultaat wilt.</p>
+
+                <h3>2. Groepslessen</h3>
+                <p>Je leert samen met andere cursisten. Meestal in een kleine groep van maximaal 6 personen. Je oefent veel met elkaar. Dat is goed voor je spreekvaardigheid.</p>
+
+                <h3>3. Online lessen</h3>
+                <p>Je volgt les via videobellen, waar je ook bent. Flexibel en effectief. Perfect als je een druk schema hebt of niet in de buurt woont. Lees meer over de opties in ons artikel over <a href="nt2-cursus.html" class="internal-link">NT2 cursus vergelijken</a>.</p>
+
+                <p>Welke vorm het beste past, hangt af van je situatie. Bekijk de <a href="index.html#prijzen" class="internal-link">prijzen</a> om een idee te krijgen van de kosten.</p>
+
+                <h2>Waar moet je op letten bij het kiezen van NT2-onderwijs?</h2>
+
+                <p>Niet elke taalschool is hetzelfde. Let op deze punten:</p>
+
+                <ul>
+                    <li><strong>Ervaring van de docent.</strong> Hoeveel jaar geeft de docent al les? Welke resultaten behalen de cursisten?</li>
+                    <li><strong>Kleine groepen.</strong> In een kleine groep krijg je meer aandacht. Maximaal 6 personen is ideaal.</li>
+                    <li><strong>Persoonlijke aanpak.</strong> Wordt er rekening gehouden met jouw niveau en doelen?</li>
+                    <li><strong>Slaagpercentage.</strong> Hoe vaak slagen cursisten voor hun examen?</li>
+                    <li><strong>Flexibiliteit.</strong> Kun je lessen inhalen of online volgen?</li>
+                </ul>
+
+                <h2>Waarom kiezen voor Joke Weenink?</h2>
+
+                <p>Al meer dan 21 jaar geef ik NT2 les. In die tijd heb ik meer dan 1.000 cursisten begeleid. Mijn slaagpercentage is 98%. Dat komt niet door toeval. Het komt door een persoonlijke aanpak, geduld en veel humor.</p>
+
+                <p>Ik geloof dat je het beste leert als je je op je gemak voelt. Geen druk. Geen oordeel. Wel veel oefenen, lachen en stap voor stap vooruit gaan. Bekijk de <a href="index.html#reviews" class="internal-link">reviews van cursisten</a> om te lezen hoe anderen het ervaren.</p>
+
+                <p>Of je nu wilt inburgeren, beter wilt functioneren op je werk of gewoon wilt meepraten met je buren: ik help je graag. Benieuwd naar de opties? Bekijk de <a href="index.html#lessen" class="internal-link">lessen</a> of lees meer over <a href="dutch-lessons.html" class="internal-link">Dutch lessons</a> als je liever Engels leest.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== RELATED ARTICLES ========== -->
+    <section class="related-articles">
+        <div class="container">
+            <h2>Meer lezen</h2>
+            <div class="related-grid">
+                <div class="related-card">
+                    <h3>NT2 cursus vergelijken</h3>
+                    <p>Privé, groep of online? Ontdek welke NT2 cursus het beste bij jou past.</p>
+                    <a href="nt2-cursus.html">Lees meer &rarr;</a>
+                </div>
+                <div class="related-card">
+                    <h3>Dutch Lessons</h3>
+                    <p>A complete guide to Dutch lessons in the Netherlands for English speakers.</p>
+                    <a href="dutch-lessons.html">Read more &rarr;</a>
+                </div>
+                <div class="related-card">
+                    <h3>NT2 lessen</h3>
+                    <p>Alles over NT2 lessen: wat je leert, hoe het werkt en wat het kost.</p>
+                    <a href="nt2-lessen.html">Lees meer &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA SECTION ========== -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Klaar om Nederlands te leren?</h2>
+            <p>Plan een gratis kennismakingsgesprek. Samen kijken we welk niveau je hebt en welke lessen bij je passen.</p>
+            <a href="mailto:weeninkjoke@hotmail.com" class="btn">Gratis kennismaking</a>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">Joke <span>Weenink</span></div>
+                    <p class="footer-desc">
+                        NT2 docent uit passie. Ik help je Nederlands leren op een manier die bij je past. Met geduld, humor en een goed lesplan.
+                    </p>
+                </div>
+                <div>
+                    <h4>Pagina's</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="over-mij.html">Over Joke</a></li>
+                        <li><a href="index.html#lessen">Lessen</a></li>
+                        <li><a href="index.html#prijzen">Prijzen</a></li>
+                        <li><a href="index.html#faq">Veelgestelde vragen</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:weeninkjoke@hotmail.com">weeninkjoke@hotmail.com</a></li>
+                        <li><a href="mailto:weeninkjoke@hotmail.com">Gratis kennismaking</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Joke Weenink NT2. Alle rechten voorbehouden.</span>
+                <span>Met &#10084;&#65039; gemaakt voor iedereen die Nederlands wil leren</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
