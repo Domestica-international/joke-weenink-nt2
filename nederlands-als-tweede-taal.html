@@ -582,6 +582,217 @@
                 padding: 40px 0 60px;
             }
         }
+
+/* ========== LANGUAGE DROPDOWN ========== */
+.lang-dropdown {
+    position: relative;
+}
+
+.lang-dropdown-btn {
+    background: none;
+    border: 1px solid #5B7B6D;
+    padding: 5px 14px;
+    border-radius: 50px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #5B7B6D;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.lang-dropdown-btn:hover {
+    background: #5B7B6D;
+    color: #fff;
+}
+
+.lang-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    list-style: none;
+    min-width: 160px;
+    padding: 8px 0;
+    z-index: 200;
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+.lang-dropdown.active .lang-dropdown-menu {
+    display: block;
+}
+
+.lang-dropdown-menu li a,
+.lang-dropdown-menu li span {
+    display: block;
+    padding: 10px 20px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #555;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.lang-dropdown-menu li a:hover {
+    background: #F2F7F5;
+    color: #2B2B2B;
+}
+
+.lang-dropdown-menu li a::after {
+    display: none !important;
+}
+
+.lang-active {
+    color: #5B7B6D !important;
+    font-weight: 600 !important;
+    background: rgba(91,123,109,0.06);
+    pointer-events: none;
+}
+
+/* ========== SEARCH ========== */
+.nav-search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #555;
+    padding: 6px;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.nav-search-btn:hover {
+    color: #5B7B6D;
+}
+
+.search-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 300;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.search-overlay.active {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 120px;
+}
+
+.search-modal {
+    background: #fff;
+    border-radius: 20px;
+    padding: 32px;
+    width: 90%;
+    max-width: 560px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+.search-modal h3 {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+}
+
+.search-input-wrapper {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 14px 20px;
+    border: 2px solid rgba(0,0,0,0.08);
+    border-radius: 50px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    border-color: #5B7B6D;
+}
+
+.search-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.3s;
+}
+
+.search-close:hover {
+    color: #2B2B2B;
+}
+
+.search-results {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.search-result-item {
+    display: block;
+    padding: 14px 16px;
+    border-radius: 12px;
+    transition: background 0.2s;
+    text-decoration: none;
+    color: #2B2B2B;
+}
+
+.search-result-item:hover {
+    background: #F2F7F5;
+}
+
+.search-result-item h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.search-result-item p {
+    font-size: 0.82rem;
+    color: #888;
+    line-height: 1.4;
+}
+
+.search-no-results {
+    text-align: center;
+    color: #888;
+    padding: 20px;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 968px) {
+    .lang-dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        padding: 4px 0 4px 16px;
+        background: transparent;
+    }
+    
+    .lang-dropdown.active .lang-dropdown-menu {
+        display: block;
+    }
+}
     </style>
 </head>
 <body>
@@ -597,6 +808,17 @@
                 <li><a href="index.html#reviews">Reviews</a></li>
                 <li><a href="artikelen.html">Artikelen</a></li>
                 <li><a href="index.html#faq">FAQ</a></li>
+                <li><button class="nav-search-btn" id="searchBtn" aria-label="Zoeken">🔍</button></li>
+                <li class="lang-dropdown">
+                    <button class="lang-dropdown-btn" aria-label="Kies taal">🌐 NL ▾</button>
+                    <ul class="lang-dropdown-menu">
+                        <li><a href="index.html" class="lang-active">🇳🇱 Nederlands</a></li>
+                        <li><a href="en/index.html">🇬🇧 English</a></li>
+                        <li><a href="pl/index.html">🇵🇱 Polski</a></li>
+                        <li><a href="ar/index.html">🇸🇦 العربية</a></li>
+                        <li><a href="zh/index.html">🇨🇳 中文</a></li>
+                    </ul>
+                </li>
                 <li><a href="mailto:weeninkjoke@hotmail.com" class="nav-cta">Gratis kennismaking</a></li>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="Menu openen">
@@ -796,6 +1018,19 @@
         </div>
     </footer>
 
+
+<!-- ========== SEARCH OVERLAY ========== -->
+<div class="search-overlay" id="searchOverlay">
+    <div class="search-modal">
+        <button class="search-close" id="searchClose">&times;</button>
+        <h3>Zoeken</h3>
+        <div class="search-input-wrapper">
+            <input type="text" class="search-input" id="searchInput" placeholder="Waar ben je naar op zoek?" autofocus>
+        </div>
+        <div class="search-results" id="searchResults"></div>
+    </div>
+</div>
+
     <!-- ========== JAVASCRIPT ========== -->
     <script>
         const navToggle = document.getElementById('navToggle');
@@ -819,6 +1054,93 @@
                 nav.classList.remove('scrolled');
             }
         });
+
+// Language dropdown toggle
+document.querySelectorAll('.lang-dropdown-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        btn.parentElement.classList.toggle('active');
+    });
+});
+
+document.addEventListener('click', () => {
+    document.querySelectorAll('.lang-dropdown').forEach(d => d.classList.remove('active'));
+});
+
+// Search functionality
+const searchPages = [
+    { title: 'Home', desc: 'Nederlands leren met Joke Weenink - NT2 docent', url: 'index.html' },
+    { title: 'Over Joke', desc: 'Maak kennis met Joke Weenink - 21+ jaar NT2 ervaring', url: 'over-mij.html' },
+    { title: 'Artikelen', desc: 'Blog artikelen over Nederlands leren en NT2', url: 'artikelen.html' },
+    { title: 'Inburgering', desc: 'Alles over het inburgeringsexamen en voorbereiding', url: 'inburgering.html' },
+    { title: 'Dutch Lessons', desc: 'Dutch lessons for expats and professionals', url: 'dutch-lessons.html' },
+    { title: 'Expats Nederland', desc: 'Nederlands leren als expat in Nederland', url: 'expats-nederland.html' },
+    { title: 'Nederlands als Tweede Taal', desc: 'Alles over NT2 - Nederlands als Tweede Taal', url: 'Nederlands-als-tweede-taal.html' },
+    { title: 'NT2 Docent', desc: 'Waarom een NT2 docent kiezen voor je taallessen', url: 'nt2-docent.html' },
+    { title: 'NT2 Cursus', desc: 'NT2 cursus bij Joke Weenink - van A1 tot B2', url: 'nt2-cursus.html' },
+    { title: 'NT2 Lessen', desc: 'Persoonlijke NT2 lessen - priv\u00e9 en groep', url: 'nt2-lessen.html' },
+    { title: 'Nederlands Leren', desc: 'Tips en advies voor het leren van Nederlands', url: 'nederlands-leren.html' },
+    { title: 'Nederlandse Taalcursus', desc: 'Nederlandse taalcursus voor alle niveaus', url: 'nederlandse-taalcursus.html' },
+];
+
+const searchOverlay = document.getElementById('searchOverlay');
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+const searchBtn = document.getElementById('searchBtn');
+const searchClose = document.getElementById('searchClose');
+
+if (searchBtn) {
+    searchBtn.addEventListener('click', () => {
+        searchOverlay.classList.add('active');
+        setTimeout(() => searchInput.focus(), 100);
+    });
+}
+
+if (searchClose) {
+    searchClose.addEventListener('click', () => {
+        searchOverlay.classList.remove('active');
+        searchInput.value = '';
+        searchResults.innerHTML = '';
+    });
+}
+
+if (searchOverlay) {
+    searchOverlay.addEventListener('click', (e) => {
+        if (e.target === searchOverlay) {
+            searchOverlay.classList.remove('active');
+            searchInput.value = '';
+            searchResults.innerHTML = '';
+        }
+    });
+}
+
+if (searchInput) {
+    searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase().trim();
+        if (query.length < 2) {
+            searchResults.innerHTML = '';
+            return;
+        }
+        const results = searchPages.filter(p => 
+            p.title.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query)
+        );
+        if (results.length === 0) {
+            searchResults.innerHTML = '<div class="search-no-results">Geen resultaten gevonden</div>';
+        } else {
+            searchResults.innerHTML = results.map(r => 
+                '<a class="search-result-item" href="' + r.url + '"><h4>' + r.title + '</h4><p>' + r.desc + '</p></a>'
+            ).join('');
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && searchOverlay.classList.contains('active')) {
+            searchOverlay.classList.remove('active');
+            searchInput.value = '';
+            searchResults.innerHTML = '';
+        }
+    });
+}
     </script>
 </body>
 </html>
